@@ -52,7 +52,10 @@
     }else{
         cell.textLabel.text = @"其它";
     }
+    cell.textLabel.textColor = [UIColor darkGrayColor];
     cell.backgroundColor = [UIColor clearColor];
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+    cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
     return cell;
     
 }

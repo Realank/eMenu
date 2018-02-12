@@ -25,7 +25,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-UB-mKe">
                     <rect key="frame" x="0.0" y="0.0" width="94" height="667"/>
-                    <color key="backgroundColor" red="0.97826262953367871" green="0.97826262953367871" blue="0.97826262953367871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.9110872733160621" green="0.9110872733160621" blue="0.9110872733160621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-p7-NO7">
                     <rect key="frame" x="94" y="0.0" width="281" height="667"/>

@@ -21,7 +21,9 @@
 #import "CommTool.h"
 #import "UIView+Extension.h"
 #import <AVOSCloud.h>
+
 #import "RLKMenu.h"
 #import "RLKDish.h"
 #import "RLKCategory.h"
+#import "RLKRestaurant.h"
 #endif /* PrefixHeader_pch */

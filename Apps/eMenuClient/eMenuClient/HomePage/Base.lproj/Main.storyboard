@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--菜点点-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -33,17 +33,35 @@
                                     <action selector="orderAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qx6-pL-ReO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiH-6X-agH">
+                                <rect key="frame" x="166" y="294" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-3i-hM9">
+                                <rect key="frame" x="146" y="236" width="83" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.68432274170430829" blue="0.30260459015991825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EiH-6X-agH" firstAttribute="top" secondItem="Fry-3i-hM9" secondAttribute="bottom" constant="16" id="7ft-bb-3LC"/>
+                            <constraint firstItem="mcY-9T-GEU" firstAttribute="top" secondItem="EiH-6X-agH" secondAttribute="bottom" constant="19" id="Pa0-Jw-0he"/>
                             <constraint firstItem="mcY-9T-GEU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QhU-pt-7nt"/>
+                            <constraint firstItem="Fry-3i-hM9" firstAttribute="centerX" secondItem="EiH-6X-agH" secondAttribute="centerX" id="Tlg-qQ-YL6"/>
                             <constraint firstItem="mcY-9T-GEU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fa3-uQ-RHe"/>
+                            <constraint firstItem="EiH-6X-agH" firstAttribute="centerX" secondItem="mcY-9T-GEU" secondAttribute="centerX" id="ghg-kh-p2D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bwn-gD-Lhz"/>
+                    <navigationItem key="navigationItem" title="菜点点" id="Bwn-gD-Lhz"/>
                     <connections>
                         <outlet property="orderButton" destination="mcY-9T-GEU" id="ebq-mH-fAP"/>
+                        <outlet property="resNameLabel" destination="Fry-3i-hM9" id="LLG-T0-0SM"/>
+                        <outlet property="resTableLabel" destination="EiH-6X-agH" id="aAa-Gz-6OB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

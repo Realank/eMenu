@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75F187C45DF01DB62BBC7DBD /* libPods-eMenuClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */; };
+		8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE95203188150000D882 /* RLKRestaurant.m */; };
 		8C803081203177F10003848B /* RLKMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803063203177F10003848B /* RLKMenu.m */; };
 		8C803082203177F10003848B /* RLKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803064203177F10003848B /* RLKCategory.m */; };
 		8C803083203177F10003848B /* RLKDish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803066203177F10003848B /* RLKDish.m */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		27EBFB72434100F763D1AD60 /* Pods-eMenuClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.debug.xcconfig"; sourceTree = "<group>"; };
 		28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eMenuClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C25AE94203188150000D882 /* RLKRestaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKRestaurant.h; sourceTree = "<group>"; };
+		8C25AE95203188150000D882 /* RLKRestaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKRestaurant.m; sourceTree = "<group>"; };
 		8C8030472031772B0003848B /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C803061203177F10003848B /* RLKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKCategory.h; sourceTree = "<group>"; };
 		8C803062203177F10003848B /* RLKDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKDish.h; sourceTree = "<group>"; };
@@ -104,11 +107,13 @@
 		8C803060203177F10003848B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8C803061203177F10003848B /* RLKCategory.h */,
-				8C803062203177F10003848B /* RLKDish.h */,
-				8C803063203177F10003848B /* RLKMenu.m */,
-				8C803064203177F10003848B /* RLKCategory.m */,
+				8C25AE94203188150000D882 /* RLKRestaurant.h */,
+				8C25AE95203188150000D882 /* RLKRestaurant.m */,
 				8C803065203177F10003848B /* RLKMenu.h */,
+				8C803063203177F10003848B /* RLKMenu.m */,
+				8C803061203177F10003848B /* RLKCategory.h */,
+				8C803064203177F10003848B /* RLKCategory.m */,
+				8C803062203177F10003848B /* RLKDish.h */,
 				8C803066203177F10003848B /* RLKDish.m */,
 			);
 			path = Models;
@@ -131,9 +136,9 @@
 		8C803070203177F10003848B /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				8C803071203177F10003848B /* ViewController.m */,
 				8C803072203177F10003848B /* Main.storyboard */,
 				8C803074203177F10003848B /* ViewController.h */,
+				8C803071203177F10003848B /* ViewController.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				8C803083203177F10003848B /* RLKDish.m in Sources */,
 				8C803087203177F10003848B /* AppDelegate.m in Sources */,
 				8C80308C203177F10003848B /* CommTool.m in Sources */,
+				8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */,
 				8C80308F203177F10003848B /* DishCollectionViewCell.m in Sources */,
 				8C803090203177F10003848B /* MenuViewController.m in Sources */,
 			);
