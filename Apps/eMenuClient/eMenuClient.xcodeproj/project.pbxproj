@@ -3,194 +3,84 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27A320FCF3C27E493D643F08 /* libPods-eMenuClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FB8D1582FF591B253F97E /* libPods-eMenuClient.a */; };
-		8C93290120312680006D4064 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93290020312680006D4064 /* AppDelegate.m */; };
-		8C93290420312680006D4064 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93290320312680006D4064 /* ViewController.m */; };
-		8C93290720312680006D4064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C93290520312680006D4064 /* Main.storyboard */; };
-		8C93290920312681006D4064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C93290820312681006D4064 /* Assets.xcassets */; };
-		8C93290C20312681006D4064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C93290A20312681006D4064 /* LaunchScreen.storyboard */; };
-		8C93290F20312681006D4064 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93290E20312681006D4064 /* main.m */; };
-		8C932918203136CB006D4064 /* CommTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C932917203136CB006D4064 /* CommTool.m */; };
-		8C932923203138F5006D4064 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C932921203138F5006D4064 /* MenuViewController.m */; };
-		8C932924203138F5006D4064 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C932922203138F5006D4064 /* MenuViewController.xib */; };
-		8C932927203139CF006D4064 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C932926203139CE006D4064 /* UIView+Extension.m */; };
-		8C93292B20313C79006D4064 /* RLKMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93292A20313C79006D4064 /* RLKMenu.m */; };
-		8C93292E20313C88006D4064 /* RLKDish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93292D20313C88006D4064 /* RLKDish.m */; };
-		8C93293220314276006D4064 /* DishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93293020314276006D4064 /* DishCollectionViewCell.m */; };
-		8C93293320314276006D4064 /* DishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C93293120314276006D4064 /* DishCollectionViewCell.xib */; };
-		8C93293620315539006D4064 /* RLKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C93293520315539006D4064 /* RLKCategory.m */; };
+		8C80304C2031772B0003848B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80304B2031772B0003848B /* AppDelegate.m */; };
+		8C80304F2031772B0003848B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80304E2031772B0003848B /* ViewController.m */; };
+		8C8030522031772B0003848B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8030502031772B0003848B /* Main.storyboard */; };
+		8C8030542031772B0003848B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8030532031772B0003848B /* Assets.xcassets */; };
+		8C8030572031772B0003848B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8030552031772B0003848B /* LaunchScreen.storyboard */; };
+		8C80305A2031772B0003848B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8030592031772B0003848B /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71D81ED184F8341F6649132F /* Pods-eMenuClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.debug.xcconfig"; sourceTree = "<group>"; };
-		8C9328FC20312680006D4064 /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C9328FF20312680006D4064 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8C93290020312680006D4064 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8C93290220312680006D4064 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C93290320312680006D4064 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8C93290620312680006D4064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C93290820312681006D4064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8C93290B20312681006D4064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C93290D20312681006D4064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C93290E20312681006D4064 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8C932915203135E1006D4064 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		8C932916203136CB006D4064 /* CommTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommTool.h; sourceTree = "<group>"; };
-		8C932917203136CB006D4064 /* CommTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommTool.m; sourceTree = "<group>"; };
-		8C932920203138F5006D4064 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		8C932921203138F5006D4064 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		8C932922203138F5006D4064 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
-		8C932925203139CE006D4064 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		8C932926203139CE006D4064 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		8C93292920313C79006D4064 /* RLKMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKMenu.h; sourceTree = "<group>"; };
-		8C93292A20313C79006D4064 /* RLKMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKMenu.m; sourceTree = "<group>"; };
-		8C93292C20313C88006D4064 /* RLKDish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKDish.h; sourceTree = "<group>"; };
-		8C93292D20313C88006D4064 /* RLKDish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKDish.m; sourceTree = "<group>"; };
-		8C93292F20314276006D4064 /* DishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DishCollectionViewCell.h; sourceTree = "<group>"; };
-		8C93293020314276006D4064 /* DishCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DishCollectionViewCell.m; sourceTree = "<group>"; };
-		8C93293120314276006D4064 /* DishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCollectionViewCell.xib; sourceTree = "<group>"; };
-		8C93293420315539006D4064 /* RLKCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKCategory.h; sourceTree = "<group>"; };
-		8C93293520315539006D4064 /* RLKCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKCategory.m; sourceTree = "<group>"; };
-		992FB8D1582FF591B253F97E /* libPods-eMenuClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eMenuClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFC8132887193F024DB438D9 /* Pods-eMenuClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.release.xcconfig"; sourceTree = "<group>"; };
+		8C8030472031772B0003848B /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C80304A2031772B0003848B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C80304B2031772B0003848B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C80304D2031772B0003848B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C80304E2031772B0003848B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C8030512031772B0003848B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C8030532031772B0003848B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C8030562031772B0003848B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C8030582031772B0003848B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C8030592031772B0003848B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8C9328F920312680006D4064 /* Frameworks */ = {
+		8C8030442031772B0003848B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A320FCF3C27E493D643F08 /* libPods-eMenuClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B434AC49060085570ADEAB8 /* Frameworks */ = {
+		8C80303E2031772B0003848B = {
 			isa = PBXGroup;
 			children = (
-				992FB8D1582FF591B253F97E /* libPods-eMenuClient.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8C9328F320312680006D4064 = {
-			isa = PBXGroup;
-			children = (
-				8C9328FE20312680006D4064 /* eMenuClient */,
-				8C9328FD20312680006D4064 /* Products */,
-				B6A92464D239D75CDB419FCA /* Pods */,
-				1B434AC49060085570ADEAB8 /* Frameworks */,
+				8C8030492031772B0003848B /* eMenuClient */,
+				8C8030482031772B0003848B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8C9328FD20312680006D4064 /* Products */ = {
+		8C8030482031772B0003848B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C9328FC20312680006D4064 /* eMenuClient.app */,
+				8C8030472031772B0003848B /* eMenuClient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8C9328FE20312680006D4064 /* eMenuClient */ = {
+		8C8030492031772B0003848B /* eMenuClient */ = {
 			isa = PBXGroup;
 			children = (
-				8C93291B20313700006D4064 /* Utils */,
-				8C93292820313C50006D4064 /* Models */,
-				8C93291A203136EC006D4064 /* HomePage */,
-				8C93291F20313879006D4064 /* MenuPage */,
-				8C932919203136D1006D4064 /* SupportFiles */,
+				8C80304A2031772B0003848B /* AppDelegate.h */,
+				8C80304B2031772B0003848B /* AppDelegate.m */,
+				8C80304D2031772B0003848B /* ViewController.h */,
+				8C80304E2031772B0003848B /* ViewController.m */,
+				8C8030502031772B0003848B /* Main.storyboard */,
+				8C8030532031772B0003848B /* Assets.xcassets */,
+				8C8030552031772B0003848B /* LaunchScreen.storyboard */,
+				8C8030582031772B0003848B /* Info.plist */,
+				8C8030592031772B0003848B /* main.m */,
 			);
 			path = eMenuClient;
-			sourceTree = "<group>";
-		};
-		8C932919203136D1006D4064 /* SupportFiles */ = {
-			isa = PBXGroup;
-			children = (
-				8C9328FF20312680006D4064 /* AppDelegate.h */,
-				8C93290020312680006D4064 /* AppDelegate.m */,
-				8C93290820312681006D4064 /* Assets.xcassets */,
-				8C93290A20312681006D4064 /* LaunchScreen.storyboard */,
-				8C93290D20312681006D4064 /* Info.plist */,
-				8C93290E20312681006D4064 /* main.m */,
-				8C932915203135E1006D4064 /* PrefixHeader.pch */,
-			);
-			path = SupportFiles;
-			sourceTree = "<group>";
-		};
-		8C93291A203136EC006D4064 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				8C93290220312680006D4064 /* ViewController.h */,
-				8C93290320312680006D4064 /* ViewController.m */,
-				8C93290520312680006D4064 /* Main.storyboard */,
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
-		8C93291B20313700006D4064 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8C932916203136CB006D4064 /* CommTool.h */,
-				8C932917203136CB006D4064 /* CommTool.m */,
-				8C932925203139CE006D4064 /* UIView+Extension.h */,
-				8C932926203139CE006D4064 /* UIView+Extension.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		8C93291F20313879006D4064 /* MenuPage */ = {
-			isa = PBXGroup;
-			children = (
-				8C932920203138F5006D4064 /* MenuViewController.h */,
-				8C932921203138F5006D4064 /* MenuViewController.m */,
-				8C932922203138F5006D4064 /* MenuViewController.xib */,
-				8C93292F20314276006D4064 /* DishCollectionViewCell.h */,
-				8C93293020314276006D4064 /* DishCollectionViewCell.m */,
-				8C93293120314276006D4064 /* DishCollectionViewCell.xib */,
-			);
-			path = MenuPage;
-			sourceTree = "<group>";
-		};
-		8C93292820313C50006D4064 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8C93292920313C79006D4064 /* RLKMenu.h */,
-				8C93292A20313C79006D4064 /* RLKMenu.m */,
-				8C93292C20313C88006D4064 /* RLKDish.h */,
-				8C93292D20313C88006D4064 /* RLKDish.m */,
-				8C93293420315539006D4064 /* RLKCategory.h */,
-				8C93293520315539006D4064 /* RLKCategory.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B6A92464D239D75CDB419FCA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				71D81ED184F8341F6649132F /* Pods-eMenuClient.debug.xcconfig */,
-				AFC8132887193F024DB438D9 /* Pods-eMenuClient.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C9328FB20312680006D4064 /* eMenuClient */ = {
+		8C8030462031772B0003848B /* eMenuClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C93291220312681006D4064 /* Build configuration list for PBXNativeTarget "eMenuClient" */;
+			buildConfigurationList = 8C80305D2031772B0003848B /* Build configuration list for PBXNativeTarget "eMenuClient" */;
 			buildPhases = (
-				E1BBB87C4A41C950DE243B58 /* [CP] Check Pods Manifest.lock */,
-				8C9328F820312680006D4064 /* Sources */,
-				8C9328F920312680006D4064 /* Frameworks */,
-				8C9328FA20312680006D4064 /* Resources */,
-				FF16C2346996C81A969D79C5 /* [CP] Embed Pods Frameworks */,
-				265609AD4AF21FD388D65DE2 /* [CP] Copy Pods Resources */,
+				8C8030432031772B0003848B /* Sources */,
+				8C8030442031772B0003848B /* Frameworks */,
+				8C8030452031772B0003848B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -198,145 +88,81 @@
 			);
 			name = eMenuClient;
 			productName = eMenuClient;
-			productReference = 8C9328FC20312680006D4064 /* eMenuClient.app */;
+			productReference = 8C8030472031772B0003848B /* eMenuClient.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8C9328F420312680006D4064 /* Project object */ = {
+		8C80303F2031772B0003848B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Realank;
 				TargetAttributes = {
-					8C9328FB20312680006D4064 = {
-						CreatedOnToolsVersion = 9.3;
+					8C8030462031772B0003848B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 8C9328F720312680006D4064 /* Build configuration list for PBXProject "eMenuClient" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 8C8030422031772B0003848B /* Build configuration list for PBXProject "eMenuClient" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 8C9328F320312680006D4064;
-			productRefGroup = 8C9328FD20312680006D4064 /* Products */;
+			mainGroup = 8C80303E2031772B0003848B;
+			productRefGroup = 8C8030482031772B0003848B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C9328FB20312680006D4064 /* eMenuClient */,
+				8C8030462031772B0003848B /* eMenuClient */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8C9328FA20312680006D4064 /* Resources */ = {
+		8C8030452031772B0003848B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C93290C20312681006D4064 /* LaunchScreen.storyboard in Resources */,
-				8C93290920312681006D4064 /* Assets.xcassets in Resources */,
-				8C93290720312680006D4064 /* Main.storyboard in Resources */,
-				8C932924203138F5006D4064 /* MenuViewController.xib in Resources */,
-				8C93293320314276006D4064 /* DishCollectionViewCell.xib in Resources */,
+				8C8030572031772B0003848B /* LaunchScreen.storyboard in Resources */,
+				8C8030542031772B0003848B /* Assets.xcassets in Resources */,
+				8C8030522031772B0003848B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		265609AD4AF21FD388D65DE2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient-resources.sh",
-				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1BBB87C4A41C950DE243B58 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-eMenuClient-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF16C2346996C81A969D79C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		8C9328F820312680006D4064 /* Sources */ = {
+		8C8030432031772B0003848B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C932927203139CF006D4064 /* UIView+Extension.m in Sources */,
-				8C93290420312680006D4064 /* ViewController.m in Sources */,
-				8C93292B20313C79006D4064 /* RLKMenu.m in Sources */,
-				8C93290F20312681006D4064 /* main.m in Sources */,
-				8C93290120312680006D4064 /* AppDelegate.m in Sources */,
-				8C93292E20313C88006D4064 /* RLKDish.m in Sources */,
-				8C932918203136CB006D4064 /* CommTool.m in Sources */,
-				8C93293620315539006D4064 /* RLKCategory.m in Sources */,
-				8C932923203138F5006D4064 /* MenuViewController.m in Sources */,
-				8C93293220314276006D4064 /* DishCollectionViewCell.m in Sources */,
+				8C80304F2031772B0003848B /* ViewController.m in Sources */,
+				8C80305A2031772B0003848B /* main.m in Sources */,
+				8C80304C2031772B0003848B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C93290520312680006D4064 /* Main.storyboard */ = {
+		8C8030502031772B0003848B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8C93290620312680006D4064 /* Base */,
+				8C8030512031772B0003848B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8C93290A20312681006D4064 /* LaunchScreen.storyboard */ = {
+		8C8030552031772B0003848B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8C93290B20312681006D4064 /* Base */,
+				8C8030562031772B0003848B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -344,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8C93291020312681006D4064 /* Debug */ = {
+		8C80305B2031772B0003848B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -354,12 +180,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -367,7 +191,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -395,14 +218,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		8C93291120312681006D4064 /* Release */ = {
+		8C80305C2031772B0003848B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -412,12 +235,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -425,7 +246,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -447,45 +267,35 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8C93291320312681006D4064 /* Debug */ = {
+		8C80305E2031772B0003848B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71D81ED184F8341F6649132F /* Pods-eMenuClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 275X96KVEB;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/eMenuClient/SupportFiles/PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/eMenuClient/SupportFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				INFOPLIST_FILE = eMenuClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.realank.eMenuClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8C93291420312681006D4064 /* Release */ = {
+		8C80305F2031772B0003848B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFC8132887193F024DB438D9 /* Pods-eMenuClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 275X96KVEB;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/eMenuClient/SupportFiles/PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/eMenuClient/SupportFiles/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				INFOPLIST_FILE = eMenuClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.realank.eMenuClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C9328F720312680006D4064 /* Build configuration list for PBXProject "eMenuClient" */ = {
+		8C8030422031772B0003848B /* Build configuration list for PBXProject "eMenuClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C93291020312681006D4064 /* Debug */,
-				8C93291120312681006D4064 /* Release */,
+				8C80305B2031772B0003848B /* Debug */,
+				8C80305C2031772B0003848B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C93291220312681006D4064 /* Build configuration list for PBXNativeTarget "eMenuClient" */ = {
+		8C80305D2031772B0003848B /* Build configuration list for PBXNativeTarget "eMenuClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C93291320312681006D4064 /* Debug */,
-				8C93291420312681006D4064 /* Release */,
+				8C80305E2031772B0003848B /* Debug */,
+				8C80305F2031772B0003848B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8C9328F420312680006D4064 /* Project object */;
+	rootObject = 8C80303F2031772B0003848B /* Project object */;
 }
