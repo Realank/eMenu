@@ -152,12 +152,12 @@
 		8C80307A203177F10003848B /* MenuPage */ = {
 			isa = PBXGroup;
 			children = (
-				8C80307B203177F10003848B /* DishCollectionViewCell.h */,
 				8C80307C203177F10003848B /* MenuViewController.h */,
-				8C80307D203177F10003848B /* DishCollectionViewCell.xib */,
-				8C80307E203177F10003848B /* MenuViewController.xib */,
-				8C80307F203177F10003848B /* DishCollectionViewCell.m */,
 				8C803080203177F10003848B /* MenuViewController.m */,
+				8C80307E203177F10003848B /* MenuViewController.xib */,
+				8C80307B203177F10003848B /* DishCollectionViewCell.h */,
+				8C80307F203177F10003848B /* DishCollectionViewCell.m */,
+				8C80307D203177F10003848B /* DishCollectionViewCell.xib */,
 			);
 			path = MenuPage;
 			sourceTree = "<group>";

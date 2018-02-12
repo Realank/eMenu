@@ -32,6 +32,7 @@
 - (void)setupTableView{
     self.dishTypeListView.delegate = self;
     self.dishTypeListView.dataSource = self;
+    [self.dishTypeListView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
