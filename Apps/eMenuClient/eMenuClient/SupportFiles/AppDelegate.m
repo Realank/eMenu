@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudCrashReporting.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AVOSCloudCrashReporting enable];
+    [AVOSCloud setApplicationId:@"hhsnB6vztTS534EE5D34Ea3Y-gzGzoHsz" clientKey:@"1sowgBBLOdybxqL0R4UxT6xP"];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [self initSVHUD];
     return YES;
+}
+
+- (void)initSVHUD{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setMinimumDismissTimeInterval:5];
 }
 
 

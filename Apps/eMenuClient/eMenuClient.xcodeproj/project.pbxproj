@@ -7,25 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C80304C2031772B0003848B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80304B2031772B0003848B /* AppDelegate.m */; };
-		8C80304F2031772B0003848B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80304E2031772B0003848B /* ViewController.m */; };
-		8C8030522031772B0003848B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8030502031772B0003848B /* Main.storyboard */; };
-		8C8030542031772B0003848B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8030532031772B0003848B /* Assets.xcassets */; };
-		8C8030572031772B0003848B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8030552031772B0003848B /* LaunchScreen.storyboard */; };
-		8C80305A2031772B0003848B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8030592031772B0003848B /* main.m */; };
+		75F187C45DF01DB62BBC7DBD /* libPods-eMenuClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */; };
+		8C803081203177F10003848B /* RLKMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803063203177F10003848B /* RLKMenu.m */; };
+		8C803082203177F10003848B /* RLKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803064203177F10003848B /* RLKCategory.m */; };
+		8C803083203177F10003848B /* RLKDish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803066203177F10003848B /* RLKDish.m */; };
+		8C803084203177F10003848B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C803069203177F10003848B /* Assets.xcassets */; };
+		8C803085203177F10003848B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C80306A203177F10003848B /* LaunchScreen.storyboard */; };
+		8C803086203177F10003848B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80306C203177F10003848B /* main.m */; };
+		8C803087203177F10003848B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80306D203177F10003848B /* AppDelegate.m */; };
+		8C803088203177F10003848B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C80306F203177F10003848B /* Info.plist */; };
+		8C803089203177F10003848B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803071203177F10003848B /* ViewController.m */; };
+		8C80308A203177F10003848B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C803072203177F10003848B /* Main.storyboard */; };
+		8C80308B203177F10003848B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803078203177F10003848B /* UIView+Extension.m */; };
+		8C80308C203177F10003848B /* CommTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803079203177F10003848B /* CommTool.m */; };
+		8C80308D203177F10003848B /* DishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80307D203177F10003848B /* DishCollectionViewCell.xib */; };
+		8C80308E203177F10003848B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80307E203177F10003848B /* MenuViewController.xib */; };
+		8C80308F203177F10003848B /* DishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80307F203177F10003848B /* DishCollectionViewCell.m */; };
+		8C803090203177F10003848B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803080203177F10003848B /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27EBFB72434100F763D1AD60 /* Pods-eMenuClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.debug.xcconfig"; sourceTree = "<group>"; };
+		28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eMenuClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8030472031772B0003848B /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C80304A2031772B0003848B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8C80304B2031772B0003848B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8C80304D2031772B0003848B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C80304E2031772B0003848B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8C8030512031772B0003848B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C8030532031772B0003848B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8C8030562031772B0003848B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C8030582031772B0003848B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C8030592031772B0003848B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C803061203177F10003848B /* RLKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKCategory.h; sourceTree = "<group>"; };
+		8C803062203177F10003848B /* RLKDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKDish.h; sourceTree = "<group>"; };
+		8C803063203177F10003848B /* RLKMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLKMenu.m; sourceTree = "<group>"; };
+		8C803064203177F10003848B /* RLKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLKCategory.m; sourceTree = "<group>"; };
+		8C803065203177F10003848B /* RLKMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKMenu.h; sourceTree = "<group>"; };
+		8C803066203177F10003848B /* RLKDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLKDish.m; sourceTree = "<group>"; };
+		8C803068203177F10003848B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C803069203177F10003848B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C80306B203177F10003848B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C80306C203177F10003848B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C80306D203177F10003848B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C80306E203177F10003848B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8C80306F203177F10003848B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C803071203177F10003848B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C803073203177F10003848B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C803074203177F10003848B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C803076203177F10003848B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8C803077203177F10003848B /* CommTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommTool.h; sourceTree = "<group>"; };
+		8C803078203177F10003848B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		8C803079203177F10003848B /* CommTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommTool.m; sourceTree = "<group>"; };
+		8C80307B203177F10003848B /* DishCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCollectionViewCell.h; sourceTree = "<group>"; };
+		8C80307C203177F10003848B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		8C80307D203177F10003848B /* DishCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCollectionViewCell.xib; sourceTree = "<group>"; };
+		8C80307E203177F10003848B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		8C80307F203177F10003848B /* DishCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCollectionViewCell.m; sourceTree = "<group>"; };
+		8C803080203177F10003848B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		DB7A8036A460D8A54F2C8DB6 /* Pods-eMenuClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F187C45DF01DB62BBC7DBD /* libPods-eMenuClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +76,8 @@
 			children = (
 				8C8030492031772B0003848B /* eMenuClient */,
 				8C8030482031772B0003848B /* Products */,
+				EA46F54B61B72734F27DDFB9 /* Pods */,
+				B9A54DA1DCF20583F523A1F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +92,91 @@
 		8C8030492031772B0003848B /* eMenuClient */ = {
 			isa = PBXGroup;
 			children = (
-				8C80304A2031772B0003848B /* AppDelegate.h */,
-				8C80304B2031772B0003848B /* AppDelegate.m */,
-				8C80304D2031772B0003848B /* ViewController.h */,
-				8C80304E2031772B0003848B /* ViewController.m */,
-				8C8030502031772B0003848B /* Main.storyboard */,
-				8C8030532031772B0003848B /* Assets.xcassets */,
-				8C8030552031772B0003848B /* LaunchScreen.storyboard */,
-				8C8030582031772B0003848B /* Info.plist */,
-				8C8030592031772B0003848B /* main.m */,
+				8C803070203177F10003848B /* HomePage */,
+				8C80307A203177F10003848B /* MenuPage */,
+				8C803060203177F10003848B /* Models */,
+				8C803067203177F10003848B /* SupportFiles */,
+				8C803075203177F10003848B /* Utils */,
 			);
 			path = eMenuClient;
+			sourceTree = "<group>";
+		};
+		8C803060203177F10003848B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C803061203177F10003848B /* RLKCategory.h */,
+				8C803062203177F10003848B /* RLKDish.h */,
+				8C803063203177F10003848B /* RLKMenu.m */,
+				8C803064203177F10003848B /* RLKCategory.m */,
+				8C803065203177F10003848B /* RLKMenu.h */,
+				8C803066203177F10003848B /* RLKDish.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C803067203177F10003848B /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8C803068203177F10003848B /* AppDelegate.h */,
+				8C803069203177F10003848B /* Assets.xcassets */,
+				8C80306A203177F10003848B /* LaunchScreen.storyboard */,
+				8C80306C203177F10003848B /* main.m */,
+				8C80306D203177F10003848B /* AppDelegate.m */,
+				8C80306E203177F10003848B /* PrefixHeader.pch */,
+				8C80306F203177F10003848B /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		8C803070203177F10003848B /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				8C803071203177F10003848B /* ViewController.m */,
+				8C803072203177F10003848B /* Main.storyboard */,
+				8C803074203177F10003848B /* ViewController.h */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		8C803075203177F10003848B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8C803076203177F10003848B /* UIView+Extension.h */,
+				8C803077203177F10003848B /* CommTool.h */,
+				8C803078203177F10003848B /* UIView+Extension.m */,
+				8C803079203177F10003848B /* CommTool.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C80307A203177F10003848B /* MenuPage */ = {
+			isa = PBXGroup;
+			children = (
+				8C80307B203177F10003848B /* DishCollectionViewCell.h */,
+				8C80307C203177F10003848B /* MenuViewController.h */,
+				8C80307D203177F10003848B /* DishCollectionViewCell.xib */,
+				8C80307E203177F10003848B /* MenuViewController.xib */,
+				8C80307F203177F10003848B /* DishCollectionViewCell.m */,
+				8C803080203177F10003848B /* MenuViewController.m */,
+			);
+			path = MenuPage;
+			sourceTree = "<group>";
+		};
+		B9A54DA1DCF20583F523A1F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA46F54B61B72734F27DDFB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27EBFB72434100F763D1AD60 /* Pods-eMenuClient.debug.xcconfig */,
+				DB7A8036A460D8A54F2C8DB6 /* Pods-eMenuClient.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C80305D2031772B0003848B /* Build configuration list for PBXNativeTarget "eMenuClient" */;
 			buildPhases = (
+				2ADA7683FBA018DD1FEC79BF /* [CP] Check Pods Manifest.lock */,
 				8C8030432031772B0003848B /* Sources */,
 				8C8030442031772B0003848B /* Frameworks */,
 				8C8030452031772B0003848B /* Resources */,
+				B010D0A1664D1AF1F27612D3 /* [CP] Embed Pods Frameworks */,
+				FE6510408E4E09D94FB8D05F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,42 +240,108 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8030572031772B0003848B /* LaunchScreen.storyboard in Resources */,
-				8C8030542031772B0003848B /* Assets.xcassets in Resources */,
-				8C8030522031772B0003848B /* Main.storyboard in Resources */,
+				8C803084203177F10003848B /* Assets.xcassets in Resources */,
+				8C80308E203177F10003848B /* MenuViewController.xib in Resources */,
+				8C803085203177F10003848B /* LaunchScreen.storyboard in Resources */,
+				8C803088203177F10003848B /* Info.plist in Resources */,
+				8C80308A203177F10003848B /* Main.storyboard in Resources */,
+				8C80308D203177F10003848B /* DishCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ADA7683FBA018DD1FEC79BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eMenuClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B010D0A1664D1AF1F27612D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE6510408E4E09D94FB8D05F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C8030432031772B0003848B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C80304F2031772B0003848B /* ViewController.m in Sources */,
-				8C80305A2031772B0003848B /* main.m in Sources */,
-				8C80304C2031772B0003848B /* AppDelegate.m in Sources */,
+				8C803089203177F10003848B /* ViewController.m in Sources */,
+				8C803081203177F10003848B /* RLKMenu.m in Sources */,
+				8C803082203177F10003848B /* RLKCategory.m in Sources */,
+				8C80308B203177F10003848B /* UIView+Extension.m in Sources */,
+				8C803086203177F10003848B /* main.m in Sources */,
+				8C803083203177F10003848B /* RLKDish.m in Sources */,
+				8C803087203177F10003848B /* AppDelegate.m in Sources */,
+				8C80308C203177F10003848B /* CommTool.m in Sources */,
+				8C80308F203177F10003848B /* DishCollectionViewCell.m in Sources */,
+				8C803090203177F10003848B /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C8030502031772B0003848B /* Main.storyboard */ = {
+		8C80306A203177F10003848B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8C8030512031772B0003848B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8C8030552031772B0003848B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C8030562031772B0003848B /* Base */,
+				8C80306B203177F10003848B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8C803072203177F10003848B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C803073203177F10003848B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -276,11 +453,13 @@
 		};
 		8C80305E2031772B0003848B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EBFB72434100F763D1AD60 /* Pods-eMenuClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 275X96KVEB;
-				INFOPLIST_FILE = eMenuClient/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/eMenuClient/SupportFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/eMenuClient/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.realank.eMenuClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +469,13 @@
 		};
 		8C80305F2031772B0003848B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB7A8036A460D8A54F2C8DB6 /* Pods-eMenuClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 275X96KVEB;
-				INFOPLIST_FILE = eMenuClient/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/eMenuClient/SupportFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/eMenuClient/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.realank.eMenuClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
