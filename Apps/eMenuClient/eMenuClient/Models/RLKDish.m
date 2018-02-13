@@ -20,6 +20,7 @@
         dish.price = dict[@"Price"];
         dish.category = dict[@"Category"];
         dish.unit = dict[@"Unit"];
+        dish._id = dict.objectId;
         return dish;
     }
     return nil;

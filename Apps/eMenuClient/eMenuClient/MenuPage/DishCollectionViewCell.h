@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DishCellOrderChangeDelegate
+
+- (void)wantOrder:(BOOL)order dish:(RLKDish*)dish;
+
+@end
+
 @interface DishCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) RLKDish* dish;
+@property (nonatomic, weak) RLKDish* dish;
+@property (nonatomic, weak) id<DishCellOrderChangeDelegate> delegate;
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath;
 + (void)registerCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath;

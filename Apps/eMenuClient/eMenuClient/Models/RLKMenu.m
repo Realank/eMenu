@@ -8,6 +8,11 @@
 
 #import "RLKMenu.h"
 
+@interface RLKMenu()
+
+@property (nonatomic, strong) NSMutableArray* orderedM;
+@end
+
 @implementation RLKMenu
 
 + (instancetype)modelWithCategories:(NSArray*)categories andDishes:(NSArray*)dishes{
@@ -125,6 +130,41 @@
         }
         resultBlock(nil);
     }];
+}
+
+- (instancetype)init{
+    if (self = [super init]) {
+        _orderedM = [NSMutableArray array];
+    }
+    return self;
+}
+
+- (NSArray *)orderedDishes{
+    return [_orderedM copy];
+}
+
+- (BOOL)findDish:(RLKDish *)dish{
+    for (RLKDish* existDish in _orderedM) {
+        if ([existDish._id isEqualToString:dish._id]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (void)orderDish:(RLKDish *)dish{
+    if (![self findDish:dish]) {
+        [_orderedM addObject:dish];
+    }
+    dish.orderCount++;
+}
+- (void)disOrderDish:(RLKDish *)dish{
+    if ([self findDish:dish]) {
+        dish.orderCount--;
+        if (dish.orderCount == 0) {
+            [_orderedM removeObject:dish];
+        }
+    }
 }
 
 @end

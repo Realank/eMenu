@@ -34,14 +34,12 @@
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath{
     NSString* kCellIdentifier = [[self class] description];
-    NSString* identifierName = [NSString stringWithFormat:@"%@%ld",kCellIdentifier,indexPath.row];
-    id cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifierName forIndexPath:indexPath];
+    id cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
     return cell;
 }
 + (void)registerCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath{
     NSString* kCellIdentifier = [[self class] description];
-    NSString* identifierName = [NSString stringWithFormat:@"%@%ld",kCellIdentifier,indexPath.row];
-    [collectionView registerNib:[UINib nibWithNibName:kCellIdentifier bundle:nil] forCellWithReuseIdentifier:identifierName];
+    [collectionView registerNib:[UINib nibWithNibName:kCellIdentifier bundle:nil] forCellWithReuseIdentifier:kCellIdentifier];
 }
 
 - (void)setDish:(RLKDish *)dish{
@@ -84,11 +82,15 @@
     
 }
 - (IBAction)orderAction:(id)sender {
-    _dish.orderCount += 1;
+    if (_delegate) {
+        [_delegate wantOrder:YES dish:_dish];
+    }
     [self updateOrderStatus];
 }
 - (IBAction)disOrderAction:(id)sender {
-    _dish.orderCount -= 1;
+    if (_delegate) {
+        [_delegate wantOrder:NO dish:_dish];
+    }
     [self updateOrderStatus];
 }
 

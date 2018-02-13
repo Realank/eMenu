@@ -22,7 +22,7 @@
     [AVOSCloudCrashReporting enable];
     [AVOSCloud setApplicationId:@"hhsnB6vztTS534EE5D34Ea3Y-gzGzoHsz" clientKey:@"1sowgBBLOdybxqL0R4UxT6xP"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+    self.window.tintColor = kThemeColor;
     [self initSVHUD];
     return YES;
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		75F187C45DF01DB62BBC7DBD /* libPods-eMenuClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */; };
 		8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE95203188150000D882 /* RLKRestaurant.m */; };
+		8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE9C20327C360000D882 /* CollectionHeaderView.m */; };
+		8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */; };
 		8C803081203177F10003848B /* RLKMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803063203177F10003848B /* RLKMenu.m */; };
 		8C803082203177F10003848B /* RLKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803064203177F10003848B /* RLKCategory.m */; };
 		8C803083203177F10003848B /* RLKDish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803066203177F10003848B /* RLKDish.m */; };
@@ -32,6 +34,9 @@
 		28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eMenuClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C25AE94203188150000D882 /* RLKRestaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKRestaurant.h; sourceTree = "<group>"; };
 		8C25AE95203188150000D882 /* RLKRestaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKRestaurant.m; sourceTree = "<group>"; };
+		8C25AE9B20327C360000D882 /* CollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderView.h; sourceTree = "<group>"; };
+		8C25AE9C20327C360000D882 /* CollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderView.m; sourceTree = "<group>"; };
+		8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		8C8030472031772B0003848B /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C803061203177F10003848B /* RLKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKCategory.h; sourceTree = "<group>"; };
 		8C803062203177F10003848B /* RLKDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKDish.h; sourceTree = "<group>"; };
@@ -122,10 +127,10 @@
 		8C803067203177F10003848B /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				8C803068203177F10003848B /* AppDelegate.h */,
 				8C803069203177F10003848B /* Assets.xcassets */,
 				8C80306A203177F10003848B /* LaunchScreen.storyboard */,
 				8C80306C203177F10003848B /* main.m */,
+				8C803068203177F10003848B /* AppDelegate.h */,
 				8C80306D203177F10003848B /* AppDelegate.m */,
 				8C80306E203177F10003848B /* PrefixHeader.pch */,
 				8C80306F203177F10003848B /* Info.plist */,
@@ -147,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				8C803076203177F10003848B /* UIView+Extension.h */,
-				8C803077203177F10003848B /* CommTool.h */,
 				8C803078203177F10003848B /* UIView+Extension.m */,
+				8C803077203177F10003848B /* CommTool.h */,
 				8C803079203177F10003848B /* CommTool.m */,
 			);
 			path = Utils;
@@ -163,6 +168,9 @@
 				8C80307B203177F10003848B /* DishCollectionViewCell.h */,
 				8C80307F203177F10003848B /* DishCollectionViewCell.m */,
 				8C80307D203177F10003848B /* DishCollectionViewCell.xib */,
+				8C25AE9B20327C360000D882 /* CollectionHeaderView.h */,
+				8C25AE9C20327C360000D882 /* CollectionHeaderView.m */,
+				8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */,
 			);
 			path = MenuPage;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 			files = (
 				8C803084203177F10003848B /* Assets.xcassets in Resources */,
 				8C80308E203177F10003848B /* MenuViewController.xib in Resources */,
+				8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */,
 				8C803085203177F10003848B /* LaunchScreen.storyboard in Resources */,
 				8C803088203177F10003848B /* Info.plist in Resources */,
 				8C80308A203177F10003848B /* Main.storyboard in Resources */,
@@ -318,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C803089203177F10003848B /* ViewController.m in Sources */,
+				8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */,
 				8C803081203177F10003848B /* RLKMenu.m in Sources */,
 				8C803082203177F10003848B /* RLKCategory.m in Sources */,
 				8C80308B203177F10003848B /* UIView+Extension.m in Sources */,
@@ -401,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -450,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

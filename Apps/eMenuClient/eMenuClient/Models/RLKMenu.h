@@ -18,4 +18,7 @@
 
 + (void)loadWithResult:(void (^)(RLKMenu* menu))resultBlock;
 
+- (NSArray*)orderedDishes;
+- (void)orderDish:(RLKDish*)dish;
+- (void)disOrderDish:(RLKDish*)dish;
 @end

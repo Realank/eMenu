@@ -8,11 +8,13 @@
 
 #import "MenuViewController.h"
 #import "DishCollectionViewCell.h"
+#import "CollectionHeaderView.h"
 #define kLayoutRatio (2.0/1.0)
-@interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource>
+@interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishCellOrderChangeDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dishTypeListView;
 @property (weak, nonatomic) IBOutlet UICollectionView *dishDisplayCollectionView;
 @property (nonatomic, assign) BOOL isScrollDown;
+@property (nonatomic, weak) UIButton* cartButton;
 @end
 
 @implementation MenuViewController
@@ -20,13 +22,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setupNaviBar];
     [self setupTableView];
+}
+
+- (void)viewDidLayoutSubviews{
     [self setupCollectionView];
 }
 
 - (void)dealloc{
     
 }
+
+- (void)wantOrder:(BOOL)order dish:(RLKDish *)dish{
+    if (order) {
+        [_menu orderDish:dish];
+    }else{
+        [_menu disOrderDish:dish];
+    }
+    [self updateCartButton];
+}
+
+- (void)updateCartButton{
+    NSInteger orderCount = [_menu orderedDishes].count;
+    [_cartButton setTitle:[NSString stringWithFormat:@"%ld",orderCount] forState:UIControlStateNormal];
+}
+
+- (void)showDetailOfDish:(RLKDish*)dish{
+    
+}
+
+#pragma mark - navi bar
+
+- (void)setupNaviBar{
+    UIButton* cartButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34, 34)];
+    [cartButton setTitle:@"0" forState:UIControlStateNormal];
+    [cartButton setRoundCornerRadius];
+    cartButton.backgroundColor = kThemeColor;
+    [cartButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIBarButtonItem* barButton = [[UIBarButtonItem alloc] initWithCustomView:cartButton];
+    [self.navigationItem setRightBarButtonItem:barButton];
+    _cartButton = cartButton;
+}
+
 #pragma mark - table view
 
 - (void)setupTableView{
@@ -69,19 +107,22 @@
     for (int i = 0; i < _menu.dishes.count; i++) {
         [DishCollectionViewCell registerCellWithCollectionView:_dishDisplayCollectionView forIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
     }
+//    [_dishDisplayCollectionView registerClass:[CollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader  withReuseIdentifier:@"CollectionHeader"];
+    [_dishDisplayCollectionView registerNib:[UINib nibWithNibName:@"CollectionHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
     self.dishDisplayCollectionView.backgroundColor = [UIColor clearColor];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat cellWidth = 225;
     CGFloat cellHeight = 265;
     CGFloat collectionViewWidth = _dishDisplayCollectionView.width;
-    NSInteger itemsInOneRow = 1;
+    NSInteger itemsInOneRow = (NSInteger)(collectionViewWidth / cellWidth);
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
     NSInteger space = (collectionViewWidth - itemsInOneRow*cellWidth)/(itemsInOneRow+1);
-    space = space > 20 ? space : 20;
+//    space = space > 20 ? space : 20;
     layout.minimumInteritemSpacing = space;
     layout.minimumLineSpacing = 20;
-    layout.sectionInset = UIEdgeInsetsMake(5, 0, 10, 0);
+    layout.sectionInset = UIEdgeInsetsMake(5, space, 10, space);
+    layout.headerReferenceSize = CGSizeMake(100, 30);
     self.dishDisplayCollectionView.collectionViewLayout = layout;
     
     self.dishDisplayCollectionView.delegate = self;
@@ -107,7 +148,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DishCollectionViewCell* cell = [DishCollectionViewCell cellWithCollectionView:collectionView forIndexPath:indexPath];
-    
+    cell.delegate = self;
     if (indexPath.section < _menu.categories.count) {
         RLKCategory* cat = _menu.categories[indexPath.section];
         NSArray* dishes = _menu.dishesByCategory[cat.type];
@@ -121,10 +162,27 @@
     return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if ([kind isEqualToString: UICollectionElementKindSectionHeader]) {
+        NSString* headerName = nil;
+        if (indexPath.section < _menu.categories.count) {
+            RLKCategory* cat =_menu.categories[indexPath.section];
+            headerName = cat.name;
+        }else{
+            headerName = @"其它";
+        }
+        CollectionHeaderView* header = (CollectionHeaderView*)[_dishDisplayCollectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView" forIndexPath:indexPath];
+        header.textLabel.text = headerName;
+        return header;
+    }
+    return nil;
+}
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger row = indexPath.row;
-    
+    RLKCategory* cat = _menu.categories[indexPath.section];
+    NSArray* dishes = _menu.dishesByCategory[cat.type];
+    RLKDish* dish = dishes[indexPath.row];
+    [self showDetailOfDish:dish];
 }
 
 #pragma mark - traking
