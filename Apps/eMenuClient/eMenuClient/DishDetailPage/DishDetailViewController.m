@@ -51,6 +51,7 @@
     }
     _orderStatusView.count = _dish.orderCount;
     _orderStatusView.delegate = self;
+    _orderStatusView.showBorder = YES;
     _describeLabel.text = _dish.descirbe;
 }
 

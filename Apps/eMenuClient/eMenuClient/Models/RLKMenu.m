@@ -74,8 +74,8 @@
     AVQuery *query = [AVQuery queryWithClassName:@"Category"];
     [query orderByAscending:@"index"];
     NSLog(@"has cache: %d",[query hasCachedResult]);
-    query.cachePolicy = kAVCachePolicyNetworkElseCache;
-    query.maxCacheAge = 3600 * 24 * 2;
+//    query.cachePolicy = kAVCachePolicyNetworkElseCache;
+//    query.maxCacheAge = 3600 * 24 * 2;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count) {
@@ -105,8 +105,8 @@
     AVQuery *query = [AVQuery queryWithClassName:@"Menu"];
     [query orderByAscending:@"index"];
     NSLog(@"has cache: %d",[query hasCachedResult]);
-    query.cachePolicy = kAVCachePolicyNetworkElseCache;
-    query.maxCacheAge = 3600 * 24 * 2;
+//    query.cachePolicy = kAVCachePolicyNetworkElseCache;
+//    query.maxCacheAge = 3600 * 24 * 2;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count) {

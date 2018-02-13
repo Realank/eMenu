@@ -19,4 +19,5 @@ IB_DESIGNABLE
 
 @property (nonatomic, assign) IBInspectable NSInteger count;
 @property (nonatomic, weak) id<OrderChangeDelegate> delegate;
+@property (nonatomic, assign) BOOL showBorder;
 @end

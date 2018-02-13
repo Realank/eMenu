@@ -26,8 +26,8 @@
     AVQuery *query = [AVQuery queryWithClassName:@"Restaurant"];
     [query orderByAscending:@"index"];
     NSLog(@"has cache: %d",[query hasCachedResult]);
-    query.cachePolicy = kAVCachePolicyNetworkElseCache;
-    query.maxCacheAge = 3600 * 24 * 2;
+//    query.cachePolicy = kAVCachePolicyNetworkElseCache;
+//    query.maxCacheAge = 3600 * 24 * 2;
     [query whereKey:@"account" equalTo:account];
     [query whereKey:@"password" equalTo:password];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

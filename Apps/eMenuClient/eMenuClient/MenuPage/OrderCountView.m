@@ -29,12 +29,22 @@ IB_DESIGNABLE
     return self;
 }
 
+- (void)setShowBorder:(BOOL)showBorder{
+    _showBorder = showBorder;
+    if (_showBorder) {
+        [self.orderBackView setBorderColor:kThemeColor width:1];
+    }
+}
+
+
 - (void)setupView{
     [[NSBundle mainBundle] loadNibNamed:@"OrderCountView" owner:self options:nil];
     [self addSubview:self.contentView];
     [self.orderBackView setRoundCornerRadius];
-    self.orderBackView.tintColor = [UIColor whiteColor];
-    self.orderBackView.backgroundColor = [kThemeColor colorWithAlphaComponent:0.8];
+    self.orderBackView.tintColor = kThemeColor;
+    self.orderBackView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
+    self.orderCountLabel.textColor = kThemeColor;
+    
     [self updateOrderStatus];
 }
 

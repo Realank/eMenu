@@ -82,7 +82,7 @@
 - (void)showCart{
     CartViewController *vc = [[CartViewController alloc] init];
     vc.menu = _menu;
-    vc.preferredContentSize = CGSizeMake(200, 500);
+    vc.preferredContentSize = CGSizeMake(300, 500);
     vc.modalPresentationStyle = UIModalPresentationPopover;
     UIPopoverPresentationController* poC = [vc popoverPresentationController];
     //    poC.barButtonItem = [self.navigationItem leftBarButtonItem];
@@ -228,7 +228,6 @@
     NSInteger row = indexPath.row;
     NSIndexPath* collectionIndexPath = [NSIndexPath indexPathForRow:0 inSection:row];
     
-    NSLog(@"tableview track%d,drag%d. collection track%d,drag%d.",_dishTypeListView.tracking,_dishTypeListView.dragging,_dishDisplayCollectionView.tracking,_dishDisplayCollectionView.dragging);
     if (_dishDisplayCollectionView.dragging) {
         return;
     }
