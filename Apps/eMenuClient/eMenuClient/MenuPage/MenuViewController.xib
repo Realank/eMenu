@@ -23,12 +23,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-UB-mKe">
-                    <rect key="frame" x="0.0" y="0.0" width="94" height="667"/>
-                    <color key="backgroundColor" red="0.9110872733160621" green="0.9110872733160621" blue="0.9110872733160621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-UB-mKe">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="667"/>
+                    <color key="backgroundColor" red="0.93938228629999998" green="0.93938228629999998" blue="0.93938228629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-p7-NO7">
-                    <rect key="frame" x="94" y="0.0" width="281" height="667"/>
+                    <rect key="frame" x="75" y="0.0" width="300" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LDn-uC-f6B">
                         <size key="itemSize" width="50" height="50"/>
@@ -42,7 +42,7 @@
             <constraints>
                 <constraint firstItem="3tW-p7-NO7" firstAttribute="leading" secondItem="o5t-UB-mKe" secondAttribute="trailing" id="30l-1C-wXS"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="o5t-UB-mKe" secondAttribute="bottom" id="7vc-J3-djM"/>
-                <constraint firstItem="3tW-p7-NO7" firstAttribute="width" secondItem="o5t-UB-mKe" secondAttribute="width" multiplier="3:1" id="Oww-lh-HYF"/>
+                <constraint firstItem="3tW-p7-NO7" firstAttribute="width" secondItem="o5t-UB-mKe" secondAttribute="width" multiplier="4:1" id="Oww-lh-HYF"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="3tW-p7-NO7" secondAttribute="trailing" id="a4k-yk-fuQ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="top" secondItem="o5t-UB-mKe" secondAttribute="top" constant="20" id="dPN-ab-eZR"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="3tW-p7-NO7" secondAttribute="bottom" id="dfp-JB-gbr"/>

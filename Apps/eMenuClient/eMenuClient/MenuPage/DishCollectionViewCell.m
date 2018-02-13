@@ -29,6 +29,7 @@
     [self setCornerRadius:5];
     _orderView.delegate = self;
     _orderView.count = _dish.orderCount;
+//    self.contentView.backgroundColor = UIColorFromRGB(0xf0f0f0);
 }
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath{

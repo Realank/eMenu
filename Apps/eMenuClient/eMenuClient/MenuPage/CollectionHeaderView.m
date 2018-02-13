@@ -14,7 +14,7 @@
     [super awakeFromNib];
 //    [self setBorderColor:[UIColor lightGrayColor] width:1];
 //    [self setCornerRadius:5];
-    self.backgroundColor = [kThemeColor colorWithAlphaComponent:0.7];;
+    self.backgroundColor = [kThemeColor colorWithAlphaComponent:0.5];;
 }
 
 @end

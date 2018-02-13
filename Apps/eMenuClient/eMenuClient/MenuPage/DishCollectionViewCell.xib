@@ -20,19 +20,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X0g-ri-qc7">
-                        <rect key="frame" x="0.0" y="5" width="225" height="210"/>
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="209"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8U-DR-jT0">
-                        <rect key="frame" x="0.0" y="215" width="225" height="50"/>
+                        <rect key="frame" x="0.0" y="209" width="225" height="56"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菜名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19f-GL-UZs">
                                 <rect key="frame" x="8" y="8" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.2253076424870466" green="0.2253076424870466" blue="0.2253076424870466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="介绍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-g8-fmE">
-                                <rect key="frame" x="8" y="29" width="209" height="17"/>
+                                <rect key="frame" x="8" y="34" width="209" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,14 +54,14 @@
                             <constraint firstAttribute="trailing" secondItem="v7G-JO-hHn" secondAttribute="trailing" constant="8" id="CZ9-4g-Wa1"/>
                             <constraint firstItem="19f-GL-UZs" firstAttribute="top" secondItem="X8U-DR-jT0" secondAttribute="top" constant="8" id="ae7-Qj-Q4O"/>
                             <constraint firstItem="19f-GL-UZs" firstAttribute="leading" secondItem="X8U-DR-jT0" secondAttribute="leading" constant="8" id="fBL-yv-4uQ"/>
+                            <constraint firstAttribute="bottom" secondItem="t2V-g8-fmE" secondAttribute="bottom" constant="5" id="kmi-MN-Q8B"/>
                             <constraint firstItem="v7G-JO-hHn" firstAttribute="centerY" secondItem="19f-GL-UZs" secondAttribute="centerY" id="siT-IM-z8y"/>
-                            <constraint firstAttribute="height" constant="50" id="ym5-Pi-50w"/>
-                            <constraint firstItem="t2V-g8-fmE" firstAttribute="top" secondItem="19f-GL-UZs" secondAttribute="bottom" id="ynD-No-jbu"/>
+                            <constraint firstItem="t2V-g8-fmE" firstAttribute="top" secondItem="19f-GL-UZs" secondAttribute="bottom" constant="5" id="ynD-No-jbu"/>
                             <constraint firstAttribute="trailing" secondItem="t2V-g8-fmE" secondAttribute="trailing" constant="8" id="ynu-cu-VoI"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPr-ye-4cb" customClass="OrderCountView">
-                        <rect key="frame" x="101" y="166" width="119" height="44"/>
+                        <rect key="frame" x="101" y="160" width="119" height="44"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="119" id="AcZ-zx-FaU"/>
@@ -70,7 +70,7 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.84459506210000002" blue="0.75273329509999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.93938228626942999" green="0.93938228626942999" blue="0.93938228626942999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="X0g-ri-qc7" secondAttribute="trailing" id="1vO-rQ-pq2"/>
                 <constraint firstItem="X0g-ri-qc7" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" id="DrZ-U4-bm3"/>
@@ -79,7 +79,7 @@
                 <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="X8U-DR-jT0" secondAttribute="trailing" id="f0E-KK-1Di"/>
                 <constraint firstItem="X8U-DR-jT0" firstAttribute="top" secondItem="JPr-ye-4cb" secondAttribute="bottom" constant="5" id="jTI-4R-xJx"/>
                 <constraint firstItem="X8U-DR-jT0" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" id="vxq-qa-55D"/>
-                <constraint firstItem="X0g-ri-qc7" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="5" id="xHp-Zn-6vJ"/>
+                <constraint firstItem="X0g-ri-qc7" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" id="xHp-Zn-6vJ"/>
                 <constraint firstItem="X8U-DR-jT0" firstAttribute="top" secondItem="X0g-ri-qc7" secondAttribute="bottom" id="ySL-7h-S1K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
