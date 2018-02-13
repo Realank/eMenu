@@ -11,6 +11,10 @@
 		8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE95203188150000D882 /* RLKRestaurant.m */; };
 		8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE9C20327C360000D882 /* CollectionHeaderView.m */; };
 		8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */; };
+		8C25AEA6203288FF0000D882 /* DishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AEA4203288FF0000D882 /* DishDetailViewController.m */; };
+		8C25AEA7203288FF0000D882 /* DishDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEA5203288FF0000D882 /* DishDetailViewController.xib */; };
+		8C25AEAA20328C540000D882 /* OrderCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AEA920328C540000D882 /* OrderCountView.m */; };
+		8C25AEAC20328C6A0000D882 /* OrderCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEAB20328C6A0000D882 /* OrderCountView.xib */; };
 		8C803081203177F10003848B /* RLKMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803063203177F10003848B /* RLKMenu.m */; };
 		8C803082203177F10003848B /* RLKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803064203177F10003848B /* RLKCategory.m */; };
 		8C803083203177F10003848B /* RLKDish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803066203177F10003848B /* RLKDish.m */; };
@@ -27,6 +31,8 @@
 		8C80308E203177F10003848B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C80307E203177F10003848B /* MenuViewController.xib */; };
 		8C80308F203177F10003848B /* DishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C80307F203177F10003848B /* DishCollectionViewCell.m */; };
 		8C803090203177F10003848B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803080203177F10003848B /* MenuViewController.m */; };
+		8CC1BA552032BFAA00E918F0 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC1BA532032BFAA00E918F0 /* CartViewController.m */; };
+		8CC1BA562032BFAA00E918F0 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1BA542032BFAA00E918F0 /* CartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		8C25AE9B20327C360000D882 /* CollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderView.h; sourceTree = "<group>"; };
 		8C25AE9C20327C360000D882 /* CollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderView.m; sourceTree = "<group>"; };
 		8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		8C25AEA3203288FF0000D882 /* DishDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DishDetailViewController.h; sourceTree = "<group>"; };
+		8C25AEA4203288FF0000D882 /* DishDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DishDetailViewController.m; sourceTree = "<group>"; };
+		8C25AEA5203288FF0000D882 /* DishDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishDetailViewController.xib; sourceTree = "<group>"; };
+		8C25AEA820328C540000D882 /* OrderCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCountView.h; sourceTree = "<group>"; };
+		8C25AEA920328C540000D882 /* OrderCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCountView.m; sourceTree = "<group>"; };
+		8C25AEAB20328C6A0000D882 /* OrderCountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCountView.xib; sourceTree = "<group>"; };
 		8C8030472031772B0003848B /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C803061203177F10003848B /* RLKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKCategory.h; sourceTree = "<group>"; };
 		8C803062203177F10003848B /* RLKDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKDish.h; sourceTree = "<group>"; };
@@ -64,6 +76,9 @@
 		8C80307E203177F10003848B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		8C80307F203177F10003848B /* DishCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCollectionViewCell.m; sourceTree = "<group>"; };
 		8C803080203177F10003848B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		8CC1BA522032BFAA00E918F0 /* CartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		8CC1BA532032BFAA00E918F0 /* CartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		8CC1BA542032BFAA00E918F0 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		DB7A8036A460D8A54F2C8DB6 /* Pods-eMenuClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C25AEA2203288E40000D882 /* DishDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				8C25AEA3203288FF0000D882 /* DishDetailViewController.h */,
+				8C25AEA4203288FF0000D882 /* DishDetailViewController.m */,
+				8C25AEA5203288FF0000D882 /* DishDetailViewController.xib */,
+			);
+			path = DishDetailPage;
+			sourceTree = "<group>";
+		};
 		8C80303E2031772B0003848B = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +127,8 @@
 			children = (
 				8C803070203177F10003848B /* HomePage */,
 				8C80307A203177F10003848B /* MenuPage */,
+				8C25AEA2203288E40000D882 /* DishDetailPage */,
+				8CC1BA512032BF7E00E918F0 /* CartPage */,
 				8C803060203177F10003848B /* Models */,
 				8C803067203177F10003848B /* SupportFiles */,
 				8C803075203177F10003848B /* Utils */,
@@ -171,8 +198,21 @@
 				8C25AE9B20327C360000D882 /* CollectionHeaderView.h */,
 				8C25AE9C20327C360000D882 /* CollectionHeaderView.m */,
 				8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */,
+				8C25AEA820328C540000D882 /* OrderCountView.h */,
+				8C25AEA920328C540000D882 /* OrderCountView.m */,
+				8C25AEAB20328C6A0000D882 /* OrderCountView.xib */,
 			);
 			path = MenuPage;
+			sourceTree = "<group>";
+		};
+		8CC1BA512032BF7E00E918F0 /* CartPage */ = {
+			isa = PBXGroup;
+			children = (
+				8CC1BA522032BFAA00E918F0 /* CartViewController.h */,
+				8CC1BA532032BFAA00E918F0 /* CartViewController.m */,
+				8CC1BA542032BFAA00E918F0 /* CartViewController.xib */,
+			);
+			path = CartPage;
 			sourceTree = "<group>";
 		};
 		B9A54DA1DCF20583F523A1F5 /* Frameworks */ = {
@@ -253,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C25AEAC20328C6A0000D882 /* OrderCountView.xib in Resources */,
 				8C803084203177F10003848B /* Assets.xcassets in Resources */,
 				8C80308E203177F10003848B /* MenuViewController.xib in Resources */,
 				8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */,
@@ -260,6 +301,8 @@
 				8C803088203177F10003848B /* Info.plist in Resources */,
 				8C80308A203177F10003848B /* Main.storyboard in Resources */,
 				8C80308D203177F10003848B /* DishCollectionViewCell.xib in Resources */,
+				8CC1BA562032BFAA00E918F0 /* CartViewController.xib in Resources */,
+				8C25AEA7203288FF0000D882 /* DishDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +370,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C803089203177F10003848B /* ViewController.m in Sources */,
+				8CC1BA552032BFAA00E918F0 /* CartViewController.m in Sources */,
+				8C25AEAA20328C540000D882 /* OrderCountView.m in Sources */,
 				8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */,
 				8C803081203177F10003848B /* RLKMenu.m in Sources */,
 				8C803082203177F10003848B /* RLKCategory.m in Sources */,
@@ -337,6 +382,7 @@
 				8C80308C203177F10003848B /* CommTool.m in Sources */,
 				8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */,
 				8C80308F203177F10003848B /* DishCollectionViewCell.m in Sources */,
+				8C25AEA6203288FF0000D882 /* DishDetailViewController.m in Sources */,
 				8C803090203177F10003848B /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

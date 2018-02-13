@@ -9,12 +9,15 @@
 #import "MenuViewController.h"
 #import "DishCollectionViewCell.h"
 #import "CollectionHeaderView.h"
+#import "DishDetailViewController.h"
+#import "CartViewController.h"
 #define kLayoutRatio (2.0/1.0)
-@interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishCellOrderChangeDelegate>
+@interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishOrderChangeDelegate,UIPopoverPresentationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dishTypeListView;
 @property (weak, nonatomic) IBOutlet UICollectionView *dishDisplayCollectionView;
 @property (nonatomic, assign) BOOL isScrollDown;
 @property (nonatomic, weak) UIButton* cartButton;
+@property (nonatomic, weak) UIBarButtonItem* cartItem;
 @end
 
 @implementation MenuViewController
@@ -40,7 +43,7 @@
     }else{
         [_menu disOrderDish:dish];
     }
-    [self updateCartButton];
+    [self reloadData];
 }
 
 - (void)updateCartButton{
@@ -49,13 +52,23 @@
 }
 
 - (void)showDetailOfDish:(RLKDish*)dish{
-    
+    DishDetailViewController* vc = [[DishDetailViewController alloc] init];
+    vc.dish = dish;
+    vc.delegate = self;
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)reloadData{
+    [self.dishDisplayCollectionView reloadData];
+    [self updateCartButton];
 }
 
 #pragma mark - navi bar
 
 - (void)setupNaviBar{
     UIButton* cartButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34, 34)];
+    [cartButton addTarget:self action:@selector(showCart) forControlEvents:UIControlEventTouchUpInside];
     [cartButton setTitle:@"0" forState:UIControlStateNormal];
     [cartButton setRoundCornerRadius];
     cartButton.backgroundColor = kThemeColor;
@@ -63,6 +76,25 @@
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc] initWithCustomView:cartButton];
     [self.navigationItem setRightBarButtonItem:barButton];
     _cartButton = cartButton;
+    _cartItem = barButton;
+}
+
+- (void)showCart{
+    CartViewController *vc = [[CartViewController alloc] init];
+    vc.menu = _menu;
+    vc.preferredContentSize = CGSizeMake(200, 500);
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController* poC = [vc popoverPresentationController];
+    //    poC.barButtonItem = [self.navigationItem leftBarButtonItem];
+    poC.barButtonItem = _cartItem;
+    poC.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    poC.delegate = self;
+    [self presentViewController:vc animated:NO completion:nil];
+    
+}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
 }
 
 #pragma mark - table view
@@ -179,9 +211,14 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    RLKCategory* cat = _menu.categories[indexPath.section];
-    NSArray* dishes = _menu.dishesByCategory[cat.type];
-    RLKDish* dish = dishes[indexPath.row];
+    RLKDish* dish = nil;
+    if (indexPath.section < _menu.categories.count) {
+        RLKCategory* cat = _menu.categories[indexPath.section];
+        NSArray* dishes = _menu.dishesByCategory[cat.type];
+        dish = dishes[indexPath.row];
+    }else{
+        dish = _menu.dishesNoCategory[indexPath.row];
+    }
     [self showDetailOfDish:dish];
 }
 
@@ -190,11 +227,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     NSIndexPath* collectionIndexPath = [NSIndexPath indexPathForRow:0 inSection:row];
-    if (_dishDisplayCollectionView.tracking) {
+    
+    NSLog(@"tableview track%d,drag%d. collection track%d,drag%d.",_dishTypeListView.tracking,_dishTypeListView.dragging,_dishDisplayCollectionView.tracking,_dishDisplayCollectionView.dragging);
+    if (_dishDisplayCollectionView.dragging) {
         return;
     }
     if ([_dishDisplayCollectionView numberOfItemsInSection:collectionIndexPath.section] > 0) {
-        [_dishDisplayCollectionView scrollToItemAtIndexPath:collectionIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+        [_dishDisplayCollectionView scrollToItemAtIndexPath:collectionIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
     }
     
 }

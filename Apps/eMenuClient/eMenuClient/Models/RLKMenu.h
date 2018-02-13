@@ -21,4 +21,5 @@
 - (NSArray*)orderedDishes;
 - (void)orderDish:(RLKDish*)dish;
 - (void)disOrderDish:(RLKDish*)dish;
+- (float)totalOrderPrice;
 @end

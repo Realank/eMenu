@@ -60,54 +60,11 @@
                             <constraint firstAttribute="trailing" secondItem="t2V-g8-fmE" secondAttribute="trailing" constant="8" id="ynu-cu-VoI"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPr-ye-4cb">
-                        <rect key="frame" x="120" y="166" width="100" height="44"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-Mb-jLS">
-                                <rect key="frame" x="56" y="0.0" width="44" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="khZ-ho-CoP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="orderAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="C1k-p4-hhq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXR-9X-ZXo">
-                                <rect key="frame" x="-14" y="0.0" width="44" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="FT2-Aj-35O"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="-"/>
-                                <connections>
-                                    <action selector="disOrderAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OSY-er-znd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-B7-DHW">
-                                <rect key="frame" x="30" y="0.0" width="25" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="llX-T3-Mhb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPr-ye-4cb" customClass="OrderCountView">
+                        <rect key="frame" x="101" y="166" width="119" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KXR-9X-ZXo" firstAttribute="leading" secondItem="JPr-ye-4cb" secondAttribute="leading" priority="750" id="0cR-s4-Trq"/>
-                            <constraint firstAttribute="bottom" secondItem="FI9-Mb-jLS" secondAttribute="bottom" constant="2" id="6tQ-mx-oNh"/>
-                            <constraint firstAttribute="bottom" secondItem="KXR-9X-ZXo" secondAttribute="bottom" constant="2" id="8sZ-i3-5qR"/>
-                            <constraint firstAttribute="width" constant="100" id="AcZ-zx-FaU"/>
-                            <constraint firstAttribute="trailing" secondItem="FI9-Mb-jLS" secondAttribute="trailing" id="Ifn-Xu-f3a"/>
-                            <constraint firstItem="FI9-Mb-jLS" firstAttribute="top" secondItem="JPr-ye-4cb" secondAttribute="top" id="Mmo-Iu-aDY"/>
-                            <constraint firstAttribute="bottom" secondItem="aH4-B7-DHW" secondAttribute="bottom" id="YrV-hm-sZI"/>
-                            <constraint firstItem="aH4-B7-DHW" firstAttribute="top" secondItem="JPr-ye-4cb" secondAttribute="top" id="b74-YO-l0i"/>
-                            <constraint firstItem="aH4-B7-DHW" firstAttribute="leading" secondItem="KXR-9X-ZXo" secondAttribute="trailing" id="kiQ-gk-Y5d"/>
-                            <constraint firstItem="FI9-Mb-jLS" firstAttribute="leading" secondItem="aH4-B7-DHW" secondAttribute="trailing" constant="1" id="qz2-dy-zmb"/>
-                            <constraint firstItem="KXR-9X-ZXo" firstAttribute="top" secondItem="JPr-ye-4cb" secondAttribute="top" id="wi5-7S-hVI"/>
+                            <constraint firstAttribute="width" constant="119" id="AcZ-zx-FaU"/>
                             <constraint firstAttribute="height" constant="44" id="yis-LM-UDz"/>
                         </constraints>
                     </view>
@@ -129,13 +86,10 @@
             <size key="customSize" width="212" height="146"/>
             <connections>
                 <outlet property="describeLabel" destination="t2V-g8-fmE" id="Sdr-VA-OH1"/>
-                <outlet property="disOrderButton" destination="KXR-9X-ZXo" id="NVM-ii-3Dw"/>
                 <outlet property="dishImageView" destination="X0g-ri-qc7" id="g8S-9d-vTU"/>
                 <outlet property="nameLabel" destination="19f-GL-UZs" id="2h5-U5-Lon"/>
-                <outlet property="orderBackView" destination="JPr-ye-4cb" id="faA-Rf-cdf"/>
                 <outlet property="orderBackViewWidthConstraint" destination="AcZ-zx-FaU" id="3VL-NU-CBt"/>
-                <outlet property="orderButton" destination="FI9-Mb-jLS" id="INC-wQ-6Ky"/>
-                <outlet property="orderCountLabel" destination="aH4-B7-DHW" id="SkL-6t-84G"/>
+                <outlet property="orderView" destination="JPr-ye-4cb" id="Mth-Nk-HCj"/>
                 <outlet property="priceLabel" destination="v7G-JO-hHn" id="0tm-40-jh8"/>
             </connections>
             <point key="canvasLocation" x="44.5" y="19.5"/>

@@ -86,6 +86,7 @@
 
 - (void)setCornerRadius:(CGFloat)radius{
     self.layer.cornerRadius = radius;
+    self.clipsToBounds = YES;
 }
 
 - (void)setRoundCornerRadius{
@@ -97,5 +98,12 @@
     self.layer.borderWidth = width;
 }
 
+- (void)setShadowColor:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius{
+    self.layer.shadowColor = color.CGColor;
+    self.layer.shadowOffset = offset;
+    self.layer.shadowRadius = radius;
+    self.layer.shadowOpacity = 0.6;
+//    self.layer.masksToBounds = NO;
+}
 
 @end

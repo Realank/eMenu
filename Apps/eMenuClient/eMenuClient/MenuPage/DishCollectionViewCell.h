@@ -7,17 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol DishCellOrderChangeDelegate
-
-- (void)wantOrder:(BOOL)order dish:(RLKDish*)dish;
-
-@end
-
+#import "MenuViewController.h"
 @interface DishCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, weak) RLKDish* dish;
-@property (nonatomic, weak) id<DishCellOrderChangeDelegate> delegate;
+@property (nonatomic, weak) id<DishOrderChangeDelegate> delegate;
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath;
 + (void)registerCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath;

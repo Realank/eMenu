@@ -167,4 +167,12 @@
     }
 }
 
+- (float)totalOrderPrice{
+    float price = 0;
+    for (RLKDish* dish in _orderedM) {
+        price += (dish.price.floatValue * dish.orderCount);
+    }
+    return price;
+}
+
 @end

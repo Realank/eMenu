@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol DishOrderChangeDelegate
+
+- (void)wantOrder:(BOOL)order dish:(RLKDish*)dish;
+
+@end
 
 @interface MenuViewController : UIViewController
 

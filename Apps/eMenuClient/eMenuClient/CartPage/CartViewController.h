@@ -1,0 +1,15 @@
+//
+//  CartViewController.h
+//  eMenuClient
+//
+//  Created by Realank on 2018/2/13.
+//  Copyright © 2018年 Realank. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface CartViewController : UIViewController
+
+@property (nonatomic, weak) RLKMenu* menu;
+
+@end
