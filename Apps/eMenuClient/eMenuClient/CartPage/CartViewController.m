@@ -52,5 +52,11 @@
     return cell;
     
 }
+- (IBAction)checkAction:(id)sender {
+    if (_goCheckDelegate) {
+        [_goCheckDelegate goCheck];
+    }
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
 @end

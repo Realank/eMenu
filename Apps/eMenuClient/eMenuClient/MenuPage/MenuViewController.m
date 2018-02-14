@@ -12,7 +12,7 @@
 #import "DishDetailViewController.h"
 #import "CartViewController.h"
 #define kLayoutRatio (2.0/1.0)
-@interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishOrderChangeDelegate,UIPopoverPresentationControllerDelegate>
+@interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishOrderChangeDelegate,UIPopoverPresentationControllerDelegate,CartViewGoCheckDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dishTypeListView;
 @property (weak, nonatomic) IBOutlet UICollectionView *dishDisplayCollectionView;
 @property (nonatomic, assign) BOOL isScrollDown;
@@ -45,6 +45,10 @@
         [_menu disOrderDish:dish];
     }
     [self reloadData];
+}
+
+- (void)goCheck{
+    
 }
 
 - (void)updateCartButton{

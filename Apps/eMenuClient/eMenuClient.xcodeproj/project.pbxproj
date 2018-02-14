@@ -33,6 +33,8 @@
 		8C803090203177F10003848B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803080203177F10003848B /* MenuViewController.m */; };
 		8CC1BA552032BFAA00E918F0 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC1BA532032BFAA00E918F0 /* CartViewController.m */; };
 		8CC1BA562032BFAA00E918F0 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1BA542032BFAA00E918F0 /* CartViewController.xib */; };
+		8CC1BA5B2033C17500E918F0 /* DishSampleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC1BA592033C17500E918F0 /* DishSampleTableViewCell.m */; };
+		8CC1BA5C2033C17500E918F0 /* DishSampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1BA5A2033C17500E918F0 /* DishSampleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,9 @@
 		8CC1BA522032BFAA00E918F0 /* CartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
 		8CC1BA532032BFAA00E918F0 /* CartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
 		8CC1BA542032BFAA00E918F0 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		8CC1BA582033C17500E918F0 /* DishSampleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DishSampleTableViewCell.h; sourceTree = "<group>"; };
+		8CC1BA592033C17500E918F0 /* DishSampleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DishSampleTableViewCell.m; sourceTree = "<group>"; };
+		8CC1BA5A2033C17500E918F0 /* DishSampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishSampleTableViewCell.xib; sourceTree = "<group>"; };
 		DB7A8036A460D8A54F2C8DB6 /* Pods-eMenuClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +216,9 @@
 				8CC1BA522032BFAA00E918F0 /* CartViewController.h */,
 				8CC1BA532032BFAA00E918F0 /* CartViewController.m */,
 				8CC1BA542032BFAA00E918F0 /* CartViewController.xib */,
+				8CC1BA582033C17500E918F0 /* DishSampleTableViewCell.h */,
+				8CC1BA592033C17500E918F0 /* DishSampleTableViewCell.m */,
+				8CC1BA5A2033C17500E918F0 /* DishSampleTableViewCell.xib */,
 			);
 			path = CartPage;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 				8C803084203177F10003848B /* Assets.xcassets in Resources */,
 				8C80308E203177F10003848B /* MenuViewController.xib in Resources */,
 				8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */,
+				8CC1BA5C2033C17500E918F0 /* DishSampleTableViewCell.xib in Resources */,
 				8C803085203177F10003848B /* LaunchScreen.storyboard in Resources */,
 				8C803088203177F10003848B /* Info.plist in Resources */,
 				8C80308A203177F10003848B /* Main.storyboard in Resources */,
@@ -370,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C803089203177F10003848B /* ViewController.m in Sources */,
+				8CC1BA5B2033C17500E918F0 /* DishSampleTableViewCell.m in Sources */,
 				8CC1BA552032BFAA00E918F0 /* CartViewController.m in Sources */,
 				8C25AEAA20328C540000D882 /* OrderCountView.m in Sources */,
 				8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */,
