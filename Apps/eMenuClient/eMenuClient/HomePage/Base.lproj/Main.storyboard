@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--菜点点-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="菜点点" id="Bwn-gD-Lhz"/>
+                    <navigationItem key="navigationItem" id="Bwn-gD-Lhz"/>
                     <connections>
                         <outlet property="orderButton" destination="mcY-9T-GEU" id="ebq-mH-fAP"/>
                         <outlet property="resNameLabel" destination="Fry-3i-hM9" id="LLG-T0-0SM"/>

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MenuViewController.h"
 @interface DishSampleTableViewCell : UITableViewCell
+
+@property (nonatomic, weak) RLKDish* dish;
+@property (nonatomic, weak) id<DishOrderChangeDelegate> delegate;
+
++ (instancetype)cellWithTableView:(UITableView *)tableView;
+
++ (CGFloat)cellHeight;
 
 @end

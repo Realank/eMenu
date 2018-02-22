@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		75F187C45DF01DB62BBC7DBD /* libPods-eMenuClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */; };
-		8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE95203188150000D882 /* RLKRestaurant.m */; };
+		8C25AE96203188150000D882 /* RLKTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE95203188150000D882 /* RLKTable.m */; };
 		8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AE9C20327C360000D882 /* CollectionHeaderView.m */; };
 		8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */; };
 		8C25AEA6203288FF0000D882 /* DishDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AEA4203288FF0000D882 /* DishDetailViewController.m */; };
 		8C25AEA7203288FF0000D882 /* DishDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEA5203288FF0000D882 /* DishDetailViewController.xib */; };
 		8C25AEAA20328C540000D882 /* OrderCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C25AEA920328C540000D882 /* OrderCountView.m */; };
 		8C25AEAC20328C6A0000D882 /* OrderCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C25AEAB20328C6A0000D882 /* OrderCountView.xib */; };
+		8C2B7CE2203E548900222570 /* ConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B7CE0203E548900222570 /* ConfirmOrderViewController.m */; };
+		8C2B7CE3203E548900222570 /* ConfirmOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B7CE1203E548900222570 /* ConfirmOrderViewController.xib */; };
+		8C2B7CEB203EB29000222570 /* ReceiptImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B7CE9203EB29000222570 /* ReceiptImageTableViewCell.m */; };
+		8C2B7CEC203EB29000222570 /* ReceiptImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B7CEA203EB29000222570 /* ReceiptImageTableViewCell.xib */; };
+		8C2B7CF0203EB2A800222570 /* DishCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B7CEE203EB2A800222570 /* DishCheckTableViewCell.m */; };
+		8C2B7CF1203EB2A800222570 /* DishCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B7CEF203EB2A800222570 /* DishCheckTableViewCell.xib */; };
 		8C803081203177F10003848B /* RLKMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803063203177F10003848B /* RLKMenu.m */; };
 		8C803082203177F10003848B /* RLKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803064203177F10003848B /* RLKCategory.m */; };
 		8C803083203177F10003848B /* RLKDish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C803066203177F10003848B /* RLKDish.m */; };
@@ -40,8 +46,8 @@
 /* Begin PBXFileReference section */
 		27EBFB72434100F763D1AD60 /* Pods-eMenuClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMenuClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMenuClient/Pods-eMenuClient.debug.xcconfig"; sourceTree = "<group>"; };
 		28682F205BA4C426F2947C72 /* libPods-eMenuClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eMenuClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C25AE94203188150000D882 /* RLKRestaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKRestaurant.h; sourceTree = "<group>"; };
-		8C25AE95203188150000D882 /* RLKRestaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKRestaurant.m; sourceTree = "<group>"; };
+		8C25AE94203188150000D882 /* RLKTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLKTable.h; sourceTree = "<group>"; };
+		8C25AE95203188150000D882 /* RLKTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLKTable.m; sourceTree = "<group>"; };
 		8C25AE9B20327C360000D882 /* CollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderView.h; sourceTree = "<group>"; };
 		8C25AE9C20327C360000D882 /* CollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderView.m; sourceTree = "<group>"; };
 		8C25AEA020327DC80000D882 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -51,6 +57,15 @@
 		8C25AEA820328C540000D882 /* OrderCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCountView.h; sourceTree = "<group>"; };
 		8C25AEA920328C540000D882 /* OrderCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCountView.m; sourceTree = "<group>"; };
 		8C25AEAB20328C6A0000D882 /* OrderCountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCountView.xib; sourceTree = "<group>"; };
+		8C2B7CDF203E548900222570 /* ConfirmOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderViewController.h; sourceTree = "<group>"; };
+		8C2B7CE0203E548900222570 /* ConfirmOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderViewController.m; sourceTree = "<group>"; };
+		8C2B7CE1203E548900222570 /* ConfirmOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmOrderViewController.xib; sourceTree = "<group>"; };
+		8C2B7CE8203EB29000222570 /* ReceiptImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiptImageTableViewCell.h; sourceTree = "<group>"; };
+		8C2B7CE9203EB29000222570 /* ReceiptImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptImageTableViewCell.m; sourceTree = "<group>"; };
+		8C2B7CEA203EB29000222570 /* ReceiptImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptImageTableViewCell.xib; sourceTree = "<group>"; };
+		8C2B7CED203EB2A800222570 /* DishCheckTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DishCheckTableViewCell.h; sourceTree = "<group>"; };
+		8C2B7CEE203EB2A800222570 /* DishCheckTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DishCheckTableViewCell.m; sourceTree = "<group>"; };
+		8C2B7CEF203EB2A800222570 /* DishCheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCheckTableViewCell.xib; sourceTree = "<group>"; };
 		8C8030472031772B0003848B /* eMenuClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMenuClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C803061203177F10003848B /* RLKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKCategory.h; sourceTree = "<group>"; };
 		8C803062203177F10003848B /* RLKDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLKDish.h; sourceTree = "<group>"; };
@@ -109,6 +124,22 @@
 			path = DishDetailPage;
 			sourceTree = "<group>";
 		};
+		8C2B7CDE203E545B00222570 /* ConfirmOrderPage */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B7CDF203E548900222570 /* ConfirmOrderViewController.h */,
+				8C2B7CE0203E548900222570 /* ConfirmOrderViewController.m */,
+				8C2B7CE1203E548900222570 /* ConfirmOrderViewController.xib */,
+				8C2B7CE8203EB29000222570 /* ReceiptImageTableViewCell.h */,
+				8C2B7CE9203EB29000222570 /* ReceiptImageTableViewCell.m */,
+				8C2B7CEA203EB29000222570 /* ReceiptImageTableViewCell.xib */,
+				8C2B7CED203EB2A800222570 /* DishCheckTableViewCell.h */,
+				8C2B7CEE203EB2A800222570 /* DishCheckTableViewCell.m */,
+				8C2B7CEF203EB2A800222570 /* DishCheckTableViewCell.xib */,
+			);
+			path = ConfirmOrderPage;
+			sourceTree = "<group>";
+		};
 		8C80303E2031772B0003848B = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +165,7 @@
 				8C80307A203177F10003848B /* MenuPage */,
 				8C25AEA2203288E40000D882 /* DishDetailPage */,
 				8CC1BA512032BF7E00E918F0 /* CartPage */,
+				8C2B7CDE203E545B00222570 /* ConfirmOrderPage */,
 				8C803060203177F10003848B /* Models */,
 				8C803067203177F10003848B /* SupportFiles */,
 				8C803075203177F10003848B /* Utils */,
@@ -144,8 +176,8 @@
 		8C803060203177F10003848B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8C25AE94203188150000D882 /* RLKRestaurant.h */,
-				8C25AE95203188150000D882 /* RLKRestaurant.m */,
+				8C25AE94203188150000D882 /* RLKTable.h */,
+				8C25AE95203188150000D882 /* RLKTable.m */,
 				8C803065203177F10003848B /* RLKMenu.h */,
 				8C803063203177F10003848B /* RLKMenu.m */,
 				8C803061203177F10003848B /* RLKCategory.h */,
@@ -301,10 +333,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2B7CF1203EB2A800222570 /* DishCheckTableViewCell.xib in Resources */,
 				8C25AEAC20328C6A0000D882 /* OrderCountView.xib in Resources */,
+				8C2B7CEC203EB29000222570 /* ReceiptImageTableViewCell.xib in Resources */,
 				8C803084203177F10003848B /* Assets.xcassets in Resources */,
 				8C80308E203177F10003848B /* MenuViewController.xib in Resources */,
 				8C25AEA120327DC80000D882 /* CollectionHeaderView.xib in Resources */,
+				8C2B7CE3203E548900222570 /* ConfirmOrderViewController.xib in Resources */,
 				8CC1BA5C2033C17500E918F0 /* DishSampleTableViewCell.xib in Resources */,
 				8C803085203177F10003848B /* LaunchScreen.storyboard in Resources */,
 				8C803088203177F10003848B /* Info.plist in Resources */,
@@ -384,16 +419,19 @@
 				8C25AEAA20328C540000D882 /* OrderCountView.m in Sources */,
 				8C25AE9D20327C360000D882 /* CollectionHeaderView.m in Sources */,
 				8C803081203177F10003848B /* RLKMenu.m in Sources */,
+				8C2B7CF0203EB2A800222570 /* DishCheckTableViewCell.m in Sources */,
 				8C803082203177F10003848B /* RLKCategory.m in Sources */,
 				8C80308B203177F10003848B /* UIView+Extension.m in Sources */,
 				8C803086203177F10003848B /* main.m in Sources */,
 				8C803083203177F10003848B /* RLKDish.m in Sources */,
 				8C803087203177F10003848B /* AppDelegate.m in Sources */,
 				8C80308C203177F10003848B /* CommTool.m in Sources */,
-				8C25AE96203188150000D882 /* RLKRestaurant.m in Sources */,
+				8C2B7CEB203EB29000222570 /* ReceiptImageTableViewCell.m in Sources */,
+				8C25AE96203188150000D882 /* RLKTable.m in Sources */,
 				8C80308F203177F10003848B /* DishCollectionViewCell.m in Sources */,
 				8C25AEA6203288FF0000D882 /* DishDetailViewController.m in Sources */,
 				8C803090203177F10003848B /* MenuViewController.m in Sources */,
+				8C2B7CE2203E548900222570 /* ConfirmOrderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

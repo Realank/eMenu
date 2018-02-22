@@ -1,28 +1,28 @@
 //
-//  Restaurant.m
+//  RLKTable.m
 //  eMenuClient
 //
 //  Created by Realank on 2018/2/12.
 //  Copyright © 2018年 Realank. All rights reserved.
 //
 
-#import "RLKRestaurant.h"
+#import "RLKTable.h"
 
-@implementation RLKRestaurant
+@implementation RLKTable
 
 + (instancetype)modelWithDict:(AVObject*)dict{
     if (dict && dict.allKeys.count) {
-        RLKRestaurant* res = [[RLKRestaurant alloc] init];
+        RLKTable* res = [[RLKTable alloc] init];
         res.name = dict[@"name"];
         res.account = dict[@"account"];
         res.password = dict[@"password"];
-        res.tableCount = dict[@"tablecount"];
+        res.tableNumber = dict[@"tableNumber"];
         return res;
     }
     return nil;
 }
 
-+ (void)loginWithAccount:(NSString*)account andPassword:(NSString*)password result:(void (^)(RLKRestaurant* restaurant))resultBlock{
++ (void)loginWithAccount:(NSString*)account andPassword:(NSString*)password result:(void (^)(RLKTable* table))resultBlock{
     AVQuery *query = [AVQuery queryWithClassName:@"Restaurant"];
     [query orderByAscending:@"index"];
     NSLog(@"has cache: %d",[query hasCachedResult]);
@@ -33,12 +33,12 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count) {
-                RLKRestaurant* res = [RLKRestaurant modelWithDict:objects.firstObject];
-                if (res) {
+                RLKTable* table = [RLKTable modelWithDict:objects.firstObject];
+                if (table) {
                     [RLKMenu loadWithResult:^(RLKMenu *menu) {
                         if (menu) {
-                            res.menu = menu;
-                            resultBlock(res);
+                            table.menu = menu;
+                            resultBlock(table);
                         }else{
                             resultBlock(nil);
                         }

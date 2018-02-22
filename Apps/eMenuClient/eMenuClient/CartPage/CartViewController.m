@@ -7,8 +7,8 @@
 //
 
 #import "CartViewController.h"
-
-@interface CartViewController ()<UITableViewDelegate, UITableViewDataSource>
+#import "DishSampleTableViewCell.h"
+@interface CartViewController ()<UITableViewDelegate, UITableViewDataSource,DishOrderChangeDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *orderButton;
 @property (weak, nonatomic) IBOutlet UITableView *orderedDishListView;
@@ -20,15 +20,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _priceLabel.text = [NSString stringWithFormat:@"¥%.1f",[_menu totalOrderPrice]];
     [_orderButton setRoundCornerRadius];
+    _orderButton.backgroundColor = kThemeColor;
     [self setupTableView];
 }
 
 - (void)setupTableView{
     _orderedDishListView.delegate = self;
     _orderedDishListView.dataSource = self;
+    [self reloadData];
 }
+
+- (IBAction)checkAction:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:nil];
+    if (_goCheckDelegate) {
+        [_goCheckDelegate goCheck];
+    }
+}
+
+- (void)wantOrder:(BOOL)order dish:(RLKDish *)dish{
+    if (_orderChangeDelegate) {
+        [_orderChangeDelegate wantOrder:order dish:dish];
+    }
+    [self reloadData];
+}
+
+- (void)reloadData{
+    [_orderedDishListView reloadData];
+    _priceLabel.text = [NSString stringWithFormat:@"¥%.1f",[_menu totalOrderPrice]];
+    _orderButton.enabled = (_menu.orderedDishes.count > 0);
+}
+
+#pragma mark - table view delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -40,23 +63,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    DishSampleTableViewCell* cell = [DishSampleTableViewCell cellWithTableView:tableView];
     RLKDish* dish = _menu.orderedDishes[row];
-    cell.textLabel.text = dish.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",(int)dish.orderCount];
-    
-    cell.textLabel.textColor = [UIColor darkGrayColor];
-    cell.backgroundColor = [UIColor clearColor];
-    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
-    cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+    cell.dish = dish;
+    cell.delegate = self;
     return cell;
     
 }
-- (IBAction)checkAction:(id)sender {
-    if (_goCheckDelegate) {
-        [_goCheckDelegate goCheck];
-    }
-    [self dismissViewControllerAnimated:NO completion:nil];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [DishSampleTableViewCell cellHeight];
 }
+
 
 @end

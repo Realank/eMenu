@@ -16,7 +16,7 @@
 
 #define UIColorFromRGB(rgb) RGBColor(((rgb&0xFF0000)>>16),((rgb&0x00FF00)>>8),(rgb&0x0000FF),1.0)
 
-#define kThemeColor UIColorFromRGB(0xf25286)
+#define kThemeColor UIColorFromRGB(0x75AFEC)//0x75AFEC0xf25286
 
 #import <UIImageView+WebCache.h>
 #import "SVProgressHUD.h"
@@ -27,5 +27,5 @@
 #import "RLKDish.h"
 #import "RLKMenu.h"
 #import "RLKCategory.h"
-#import "RLKRestaurant.h"
+#import "RLKTable.h"
 #endif /* PrefixHeader_pch */

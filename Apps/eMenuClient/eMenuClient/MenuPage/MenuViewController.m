@@ -11,6 +11,7 @@
 #import "CollectionHeaderView.h"
 #import "DishDetailViewController.h"
 #import "CartViewController.h"
+#import "ConfirmOrderViewController.h"
 #define kLayoutRatio (2.0/1.0)
 @interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishOrderChangeDelegate,UIPopoverPresentationControllerDelegate,CartViewGoCheckDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dishTypeListView;
@@ -25,9 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"点菜";
     [self setupNaviBar];
     [self setupTableView];
     [self updateCartButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self reloadData];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -48,6 +55,11 @@
 }
 
 - (void)goCheck{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        ConfirmOrderViewController* vc = [[ConfirmOrderViewController alloc] init];
+        vc.menu = _menu;
+        [self presentViewController:vc animated:YES completion:nil];
+    });
     
 }
 
@@ -87,6 +99,8 @@
 - (void)showCart{
     CartViewController *vc = [[CartViewController alloc] init];
     vc.menu = _menu;
+    vc.orderChangeDelegate = self;
+    vc.goCheckDelegate = self;
     vc.preferredContentSize = CGSizeMake(300, 500);
     vc.modalPresentationStyle = UIModalPresentationPopover;
     UIPopoverPresentationController* poC = [vc popoverPresentationController];

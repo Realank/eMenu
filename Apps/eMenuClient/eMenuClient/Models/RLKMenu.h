@@ -22,4 +22,5 @@
 - (void)orderDish:(RLKDish*)dish;
 - (void)disOrderDish:(RLKDish*)dish;
 - (float)totalOrderPrice;
+- (void)clearAllOrders;
 @end

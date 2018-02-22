@@ -175,4 +175,11 @@
     return price;
 }
 
+- (void)clearAllOrders{
+    for (RLKDish* dish in _orderedM) {
+        dish.orderCount = 0;
+    }
+    [_orderedM removeAllObjects];
+}
+
 @end

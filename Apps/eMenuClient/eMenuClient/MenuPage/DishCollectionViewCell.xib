@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X0g-ri-qc7">
-                        <rect key="frame" x="0.0" y="0.0" width="225" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="205"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8U-DR-jT0">
-                        <rect key="frame" x="0.0" y="209" width="225" height="56"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X8U-DR-jT0">
+                        <rect key="frame" x="0.0" y="205" width="225" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菜名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19f-GL-UZs">
                                 <rect key="frame" x="8" y="8" width="104" height="21"/>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="介绍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-g8-fmE">
-                                <rect key="frame" x="8" y="34" width="209" height="17"/>
+                                <rect key="frame" x="8" y="38" width="209" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,14 +54,14 @@
                             <constraint firstAttribute="trailing" secondItem="v7G-JO-hHn" secondAttribute="trailing" constant="8" id="CZ9-4g-Wa1"/>
                             <constraint firstItem="19f-GL-UZs" firstAttribute="top" secondItem="X8U-DR-jT0" secondAttribute="top" constant="8" id="ae7-Qj-Q4O"/>
                             <constraint firstItem="19f-GL-UZs" firstAttribute="leading" secondItem="X8U-DR-jT0" secondAttribute="leading" constant="8" id="fBL-yv-4uQ"/>
+                            <constraint firstAttribute="height" constant="60" id="hGK-Av-z7J"/>
                             <constraint firstAttribute="bottom" secondItem="t2V-g8-fmE" secondAttribute="bottom" constant="5" id="kmi-MN-Q8B"/>
                             <constraint firstItem="v7G-JO-hHn" firstAttribute="centerY" secondItem="19f-GL-UZs" secondAttribute="centerY" id="siT-IM-z8y"/>
-                            <constraint firstItem="t2V-g8-fmE" firstAttribute="top" secondItem="19f-GL-UZs" secondAttribute="bottom" constant="5" id="ynD-No-jbu"/>
                             <constraint firstAttribute="trailing" secondItem="t2V-g8-fmE" secondAttribute="trailing" constant="8" id="ynu-cu-VoI"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPr-ye-4cb" customClass="OrderCountView">
-                        <rect key="frame" x="101" y="160" width="119" height="44"/>
+                        <rect key="frame" x="101" y="156" width="119" height="44"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="119" id="AcZ-zx-FaU"/>
