@@ -20,5 +20,5 @@
 - (void)setCornerRadius:(CGFloat)radius;
 - (void)setRoundCornerRadius;
 - (void)setBorderColor:(UIColor*)color width:(CGFloat)width;
-- (void)setShadowColor:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius;
+- (void)setShadowColor:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius opacity:(CGFloat)opacity;
 @end

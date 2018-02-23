@@ -28,6 +28,11 @@
     [self configUI];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    _backScrollView.contentSize = CGSizeMake(0, _backView.height);
+}
+ 
 - (void)changeOrderCount:(BOOL)add{
     if (_delegate) {
         [_delegate wantOrder:add dish:_dish];

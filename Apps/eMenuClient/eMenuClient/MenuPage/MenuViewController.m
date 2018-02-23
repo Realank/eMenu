@@ -16,9 +16,9 @@
 @interface MenuViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource,DishOrderChangeDelegate,UIPopoverPresentationControllerDelegate,CartViewGoCheckDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dishTypeListView;
 @property (weak, nonatomic) IBOutlet UICollectionView *dishDisplayCollectionView;
-@property (nonatomic, assign) BOOL isScrollDown;
 @property (nonatomic, weak) UIButton* cartButton;
 @property (nonatomic, weak) UIBarButtonItem* cartItem;
+@property (nonatomic, assign) BOOL isSelecting;
 @end
 
 @implementation MenuViewController
@@ -27,19 +27,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"点菜";
+    self.automaticallyAdjustsScrollViewInsets = YES;
     [self setupNaviBar];
     [self setupTableView];
     [self updateCartButton];
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self reloadData];
+    [self registerCollectionCells];
 }
 
 - (void)viewDidLayoutSubviews{
-    [self setupCollectionView];
+    [super viewDidLayoutSubviews];
+    if (!_dishDisplayCollectionView.dragging && !_dishDisplayCollectionView.tracking && !_dishDisplayCollectionView.decelerating && !_isSelecting) {
+        [self setupCollectionViewLayout];
+    }
 }
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self reloadData];
+}
+
 
 - (void)dealloc{
     
@@ -153,14 +159,20 @@
 
 #pragma mark - collection view
 
-- (void)setupCollectionView{
-    
-    for (int i = 0; i < _menu.dishes.count; i++) {
-        [DishCollectionViewCell registerCellWithCollectionView:_dishDisplayCollectionView forIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+- (void)registerCollectionCells{
+    NSInteger sections = [self numberOfSectionsInCollectionView:_dishDisplayCollectionView];
+    for (int i = 0; i < sections; i++) {
+        NSInteger rows = [self collectionView:_dishDisplayCollectionView numberOfItemsInSection:i];
+        for (int j = 0; j < rows; j++) {
+            [DishCollectionViewCell registerCellWithCollectionView:_dishDisplayCollectionView forIndexPath:[NSIndexPath indexPathForRow:j inSection:i]];
+        }
+        
     }
-//    [_dishDisplayCollectionView registerClass:[CollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader  withReuseIdentifier:@"CollectionHeader"];
     [_dishDisplayCollectionView registerNib:[UINib nibWithNibName:@"CollectionHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionHeaderView"];
     self.dishDisplayCollectionView.backgroundColor = [UIColor clearColor];
+    
+}
+- (void)setupCollectionViewLayout{
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat cellWidth = 225;
@@ -172,10 +184,9 @@
 //    space = space > 20 ? space : 20;
     layout.minimumInteritemSpacing = space;
     layout.minimumLineSpacing = 20;
-    layout.sectionInset = UIEdgeInsetsMake(5, space, 10, space);
+    layout.sectionInset = UIEdgeInsetsMake(20, space, 20, space);
     layout.headerReferenceSize = CGSizeMake(100, 30);
     self.dishDisplayCollectionView.collectionViewLayout = layout;
-    
     self.dishDisplayCollectionView.delegate = self;
     self.dishDisplayCollectionView.dataSource = self;
 }
@@ -245,44 +256,57 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-    NSIndexPath* collectionIndexPath = [NSIndexPath indexPathForRow:0 inSection:row];
+    NSIndexPath* collectionIndexPath = [NSIndexPath indexPathForItem:0 inSection:row];
+    [self selectRowAtIndexPath:indexPath.row];
+    if ([_dishDisplayCollectionView numberOfItemsInSection:collectionIndexPath.section] > 0) {
+        _isSelecting = YES;
+        [_dishDisplayCollectionView scrollToItemAtIndexPath:collectionIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:YES ];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            _isSelecting = NO;
+        });
+    }
     
-    if (_dishDisplayCollectionView.dragging) {
+}
+
+//将显示视图
+-(void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath{
+    if (_isSelecting) {
         return;
     }
-    if ([_dishDisplayCollectionView numberOfItemsInSection:collectionIndexPath.section] > 0) {
-        [_dishDisplayCollectionView scrollToItemAtIndexPath:collectionIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
+    NSArray* indexes = [_dishDisplayCollectionView indexPathsForVisibleItems];
+    NSInteger lowestSection = ((NSIndexPath*)[indexes firstObject]).section;
+    for (NSIndexPath* index in indexes) {
+        if (index.section < lowestSection) {
+            lowestSection = index.section;
+        }
     }
-    
+    [self selectRowAtIndexPath:lowestSection];
+}
+//将结束显示视图
+-(void)collectionView:(UICollectionView *)collectionView didEndDisplayingSupplementaryView:(UICollectionReusableView *)view forElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath{
+    if (_isSelecting) {
+        return;
+    }
+    NSArray* indexes = [_dishDisplayCollectionView indexPathsForVisibleItems];
+    NSInteger lowestSection = ((NSIndexPath*)[indexes firstObject]).section;
+    for (NSIndexPath* index in indexes) {
+        if (index.section < lowestSection) {
+            lowestSection = index.section;
+        }
+    }
+    [self selectRowAtIndexPath:lowestSection];
 }
 
-// 标记一下 CollectionView 的滚动方向，是向上还是向下
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    static float lastOffsetY = 0;
-    if (self.dishDisplayCollectionView == scrollView)
-    {
-        _isScrollDown = lastOffsetY < scrollView.contentOffset.y;
-        lastOffsetY = scrollView.contentOffset.y;
-    }
-}
-
-// CollectionView 分区标题即将展示
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-    // 当前 CollectionView 滚动的方向向上， CollectionView 是用户拖拽而产生滚动的（主要是判断 CollectionView 是用户拖拽而滚动的，还是点击 TableView 而滚动的）
-    if (!_isScrollDown && collectionView.dragging)
-    {
-        [self selectRowAtIndexPath:indexPath.section];
-    }
-}
-
-// CollectionView 分区标题展示结束
-- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(nonnull UICollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    // 当前 CollectionView 滚动的方向向下， CollectionView 是用户拖拽而产生滚动的（主要是判断 CollectionView 是用户拖拽而滚动的，还是点击 TableView 而滚动的）
-    if (_isScrollDown && collectionView.dragging)
-    {
-        [self selectRowAtIndexPath:indexPath.section + 1];
-    }
-}
+//- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(nonnull UICollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
+//    NSArray* indexes = [_dishDisplayCollectionView indexPathsForVisibleItems];
+//    NSInteger lowestSection = ((NSIndexPath*)[indexes firstObject]).section;
+//    for (NSIndexPath* index in indexes) {
+//        if (index.section < lowestSection) {
+//            lowestSection = index.section;
+//        }
+//    }
+//    [self selectRowAtIndexPath:lowestSection];
+//}
 
 // 当拖动 CollectionView 的时候，处理 TableView
 - (void)selectRowAtIndexPath:(NSInteger)index

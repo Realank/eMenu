@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,23 +27,23 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-2h-wci">
-                    <rect key="frame" x="115.5" y="215" width="537.5" height="614"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-2h-wci">
+                    <rect key="frame" x="333" y="125" width="358" height="538"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73a-h7-Bd2">
-                            <rect key="frame" x="0.0" y="0.0" width="537.5" height="589"/>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73a-h7-Bd2">
+                            <rect key="frame" x="0.0" y="0.0" width="358" height="495"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="PDZ-Wu-CXA">
-                                    <rect key="frame" x="0.0" y="0.0" width="537.5" height="403"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="268.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="PDZ-Wu-CXA" secondAttribute="height" multiplier="4:3" id="ylj-jB-yse"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" verticalHuggingPriority="260" translatesAutoresizingMaskIntoConstraints="NO" id="tMF-7C-o93">
-                                    <rect key="frame" x="0.0" y="403" width="537.5" height="186"/>
+                                    <rect key="frame" x="0.0" y="268.5" width="358" height="226.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zL-k8-N4w">
                                             <rect key="frame" x="15" y="15" width="72" height="36"/>
@@ -52,7 +52,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpi-xK-itO">
-                                            <rect key="frame" x="15" y="115" width="507.5" height="61"/>
+                                            <rect key="frame" x="15" y="115" width="328" height="101.5"/>
                                             <string key="text">@property (strong, nonatomic) IBOutlet UIView *bgView;
 
 @property (weak, nonatomic) IBOutlet UIButton *btn;</string>
@@ -61,13 +61,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stockcount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOU-uF-RiW">
-                                            <rect key="frame" x="437.5" y="22.5" width="85" height="21"/>
+                                            <rect key="frame" x="258" y="23" width="85" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2o-H3-Mem" customClass="OrderCountView">
-                                            <rect key="frame" x="403.5" y="61" width="119" height="44"/>
+                                            <rect key="frame" x="224" y="61" width="119" height="44"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="AMf-kd-CII"/>
@@ -118,6 +118,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="73a-h7-Bd2" secondAttribute="trailing" id="0g6-2C-zZu"/>
+                        <constraint firstAttribute="width" secondItem="KZc-2h-wci" secondAttribute="height" multiplier="2:3" id="2ix-on-7tq"/>
                         <constraint firstItem="73a-h7-Bd2" firstAttribute="leading" secondItem="KZc-2h-wci" secondAttribute="leading" id="35k-5V-pO1"/>
                         <constraint firstAttribute="bottom" secondItem="73a-h7-Bd2" secondAttribute="bottom" id="5jg-Gc-ZYF"/>
                         <constraint firstAttribute="width" secondItem="73a-h7-Bd2" secondAttribute="width" id="hfj-Qn-Wg3"/>
@@ -127,8 +128,8 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.48426496478873238" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="KZc-2h-wci" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="ELL-3n-d7u"/>
-                <constraint firstItem="73a-h7-Bd2" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="chn-kJ-cEh"/>
+                <constraint firstItem="KZc-2h-wci" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" priority="750" id="ELL-3n-d7u"/>
+                <constraint firstItem="KZc-2h-wci" firstAttribute="width" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="N77-xC-T9r"/>
                 <constraint firstItem="KZc-2h-wci" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="mJE-MS-T6a"/>
                 <constraint firstItem="KZc-2h-wci" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="yH4-vr-H3Z"/>
             </constraints>

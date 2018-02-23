@@ -29,18 +29,19 @@
     [self setCornerRadius:5];
     _orderView.delegate = self;
     _orderView.count = _dish.orderCount;
+//    [_orderView setShadowColor:[UIColor blackColor] offset:CGSizeMake(8, 8) radius:8 opacity:0.4];
 //    self.contentView.backgroundColor = UIColorFromRGB(0xf0f0f0);
 }
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath{
     NSString* kCellIdentifier = [[self class] description];
-    NSString* identificate = [NSString stringWithFormat:@"%@%d",kCellIdentifier,indexPath.row%2];
+    NSString* identificate = [NSString stringWithFormat:@"%@%d_%d",kCellIdentifier,indexPath.section,indexPath.row];
     id cell = [collectionView dequeueReusableCellWithReuseIdentifier:identificate forIndexPath:indexPath];
     return cell;
 }
 + (void)registerCellWithCollectionView:(UICollectionView *)collectionView forIndexPath:(NSIndexPath*)indexPath{
     NSString* kCellIdentifier = [[self class] description];
-    NSString* identificate = [NSString stringWithFormat:@"%@%d",kCellIdentifier,indexPath.row%2];
+    NSString* identificate = [NSString stringWithFormat:@"%@%d_%d",kCellIdentifier,indexPath.section,indexPath.row];
     [collectionView registerNib:[UINib nibWithNibName:kCellIdentifier bundle:nil] forCellWithReuseIdentifier:identificate];
 }
 

@@ -44,7 +44,6 @@ IB_DESIGNABLE
     self.orderBackView.tintColor = kThemeColor;
     self.orderBackView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
     self.orderCountLabel.textColor = kThemeColor;
-    
     [self updateOrderStatus];
 }
 

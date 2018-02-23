@@ -7,6 +7,7 @@
 //
 
 #import "RLKDish.h"
+#import "SDWebImagePrefetcher.h"
 
 @implementation RLKDish
 
@@ -16,6 +17,7 @@
         dish.name = dict[@"DishName"];
         dish.descirbe = dict[@"DishDescribe"];
         dish.imageURL = dict[@"ImageURL"];
+        [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:@[[NSURL URLWithString:dish.imageURL]]];
         dish.stock = dict[@"Count"];
         dish.price = dict[@"Price"];
         dish.category = dict[@"Category"];

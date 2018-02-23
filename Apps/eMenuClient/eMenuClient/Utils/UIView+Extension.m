@@ -98,11 +98,11 @@
     self.layer.borderWidth = width;
 }
 
-- (void)setShadowColor:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius{
+- (void)setShadowColor:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius opacity:(CGFloat)opacity{
     self.layer.shadowColor = color.CGColor;
     self.layer.shadowOffset = offset;
     self.layer.shadowRadius = radius;
-    self.layer.shadowOpacity = 0.6;
+    self.layer.shadowOpacity = opacity;
 //    self.layer.masksToBounds = NO;
 }
 
