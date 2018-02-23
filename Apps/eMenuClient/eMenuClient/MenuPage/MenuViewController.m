@@ -183,8 +183,8 @@
     NSInteger space = (collectionViewWidth - itemsInOneRow*cellWidth)/(itemsInOneRow+1);
 //    space = space > 20 ? space : 20;
     layout.minimumInteritemSpacing = space;
-    layout.minimumLineSpacing = 20;
-    layout.sectionInset = UIEdgeInsetsMake(20, space, 20, space);
+    layout.minimumLineSpacing = 15;
+    layout.sectionInset = UIEdgeInsetsMake(5, space, 15, space);
     layout.headerReferenceSize = CGSizeMake(100, 30);
     self.dishDisplayCollectionView.collectionViewLayout = layout;
     self.dishDisplayCollectionView.delegate = self;
