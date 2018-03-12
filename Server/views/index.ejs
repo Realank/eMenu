@@ -7,5 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form method="post" action="/admin/newmovie">
+      <label>name</label>
+      <input type="text" name="movie[name]">
+      <label>description</label>
+      <input type="text" name="movie[description]">
+      <button type="submit">submit</button>
+    </form>
   </body>
 </html>

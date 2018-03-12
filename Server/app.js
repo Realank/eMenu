@@ -8,6 +8,9 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var dbEngine = require("./routes/DBEngine");
+dbEngine.start();
+
 var app = express();
 
 // view engine setup
@@ -18,12 +21,20 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.post('/admin/newmovie',function (req,res) {
+    console.log('body', req.body);
+    var movie = req.body.movie;
+    console.log('post == ' + movie);
+    dbEngine.postMovie(movie,function () {
+        res.redirect('/')
+    })
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

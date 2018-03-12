@@ -2,8 +2,8 @@
 //  UIView+Extension.m
 //  
 //
-//  Created by Fire on 15/7/27.
-//  Copyright (c) 2015年 Fire. All rights reserved.
+//  Created by Realank on 15/7/27.
+//  Copyright (c) 2015年 Realank. All rights reserved.
 //
 
 #import "UIView+Extension.h"
