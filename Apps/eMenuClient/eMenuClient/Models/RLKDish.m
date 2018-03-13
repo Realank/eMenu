@@ -15,7 +15,7 @@
     if (dict && dict.allKeys.count) {
         RLKDish* dish = [[RLKDish alloc] init];
         dish.name = dict[@"DishName"];
-        dish.descirbe = dict[@"DishDescribe"];
+        dish.describe = dict[@"DishDescribe"];
         dish.imageURL = dict[@"ImageURL"];
         [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:@[[NSURL URLWithString:dish.imageURL]]];
         dish.stock = dict[@"Count"];
@@ -29,7 +29,7 @@
 }
 
 - (NSString *)description{
-    return [NSString stringWithFormat:@"%@(%@) %@",self.name, self.descirbe, self.price];
+    return [NSString stringWithFormat:@"%@(%@) %@",self.name, self.describe, self.price];
 }
 
 @end

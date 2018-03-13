@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="/javascripts/jquery-3.3.1.min.js">
+    </script>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<h3 id="error_label" style="color: red"></h3>
+<table cellspacing="10" width="1000px">
+    <% var properties = ["name","describe","category","imageURL", "unit", "price", "stock", "resId"] %>
+    <% for(var i=0;i< properties.length;i++){ %>
+    <% var property = properties[i] %>
+    <tr>
+        <td>
+            <%= property %>
+        </td>
+        <td>
+            <input type="text" name="dish[<%= property %>]" id="input_<%= property %>">
+        </td>
+    </tr>
+    <%}%>
+</table>
+
+<button type="button" id="submitbutton">submit</button>
+<script>
+    var properties = ["name","describe","category","imageURL", "unit", "price", "stock", "resId"]
+
+    $("#submitbutton").click(function(){
+        var dish = {}
+        for (var i = 0; i < properties.length; i++){
+            property = properties[i];
+            dish[property] = $("#input_"+property).val()
+        }
+        if(getDishId().length > 0) {
+            dish.id = getDishId()
+        }
+        console.log("submit:",dish);
+        $.post('/data/newdish',{dish:dish},function(data,status){
+            console.log("Data: " , data , "nStatus: " , status);
+            if(data.status === 'error'){
+                console.log(data.reason);
+                $("#error_label").html(data.reason)
+            }else{
+                $("#error_label").html("")
+                self.location.href = "/"
+            }
+
+        });
+    });
+    $(function(){
+        if(getDishId().length > 0){
+            $.get('/data/dish/'+getDishId(),function(data,status){
+                for(var i = 0 ; i < properties.length ; i++){
+
+                    property = properties[i];
+                    console.log(property,":",data[property])
+                    var content = data[property]
+                    $("#input_"+property).val(content)
+                }
+            });
+        }
+
+    })
+    function getDishId() {
+        var pathes = window.location.pathname.split('/');
+        if(pathes.length == 3 && pathes[1] === 'edit') {
+            var id = pathes[2];
+            return id;
+        }
+        return '';
+    }
+</script>
+</body>
+</html>

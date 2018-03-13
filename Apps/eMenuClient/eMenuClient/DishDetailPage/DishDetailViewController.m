@@ -57,7 +57,7 @@
     _orderStatusView.count = _dish.orderCount;
     _orderStatusView.delegate = self;
     _orderStatusView.showBorder = YES;
-    _describeLabel.text = _dish.descirbe;
+    _describeLabel.text = _dish.describe;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

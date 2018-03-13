@@ -49,7 +49,7 @@
     _dish = dish;
     [_dishImageView sd_setImageWithURL:[NSURL URLWithString:dish.imageURL]];
     _nameLabel.text = dish.name;
-    _describeLabel.text = dish.descirbe;
+    _describeLabel.text = dish.describe;
     if (dish.unit.length) {
         _priceLabel.text = [NSString stringWithFormat:@"¥%@/%@",dish.price,dish.unit];
     }else{

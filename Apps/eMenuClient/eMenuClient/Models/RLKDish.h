@@ -11,7 +11,7 @@
 @interface RLKDish : NSObject
 @property (nonatomic, copy) NSString* _id;
 @property (nonatomic, copy) NSString* name;
-@property (nonatomic, copy) NSString* descirbe;
+@property (nonatomic, copy) NSString* describe;
 @property (nonatomic, copy) NSString* category;
 @property (nonatomic, copy) NSString* imageURL;
 @property (nonatomic, copy) NSString* unit;
