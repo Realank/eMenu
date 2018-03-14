@@ -45,6 +45,12 @@ DishSchema.statics = {
             .sort('meta.updateAt')
             .exec(cb)
     },
+    fetchByResId: function(resId,cb) {
+        return this
+            .find({resId:resId})
+            .sort('meta.updateAt')
+            .exec(cb)
+    },
     // 根据id获取文档（记录）
     findById: function(id, cb) {
         return this

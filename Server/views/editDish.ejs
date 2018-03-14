@@ -54,25 +54,42 @@
     });
     $(function(){
         if(getDishId().length > 0){
+            //edit
             $.get('/data/dish/'+getDishId(),function(data,status){
                 for(var i = 0 ; i < properties.length ; i++){
-
+                    var dish = data.data
                     property = properties[i];
-                    console.log(property,":",data[property])
-                    var content = data[property]
+                    var content = dish[property]
                     $("#input_"+property).val(content)
                 }
             });
+        }else if(getResId().length > 0){
+            //add
+            $("#input_resId").val(getResId())
         }
 
     })
     function getDishId() {
         var pathes = window.location.pathname.split('/');
-        if(pathes.length == 3 && pathes[1] === 'edit') {
+        if(pathes.length > 2 && pathes[1] === 'editdish') {
             var id = pathes[2];
             return id;
         }
         return '';
+    }
+    function getResId() {
+        var pathes = window.location.pathname.split('/');
+        if(pathes.length > 2 && pathes[1] === 'adddish') {
+            var id = getQueryString('resId');
+            return id;
+        }
+        return '';
+    }
+    function getQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
     }
 </script>
 </body>
